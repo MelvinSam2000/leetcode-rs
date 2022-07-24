@@ -22,5 +22,5 @@ pub fn rob(nums: Vec<i32>) -> i32 {
 
 #[test]
 fn t1() {
-    assert_eq!(rob(vec![1,2,3,1]), 4);
+    assert_eq!(rob(vec![1, 2, 3, 1]), 4);
 }
