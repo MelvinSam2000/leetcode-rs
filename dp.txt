@@ -1,0 +1,20 @@
+[x] 509 - Fibonacci Number
+[ ] 1137 - N-th Tribonacci Number
+
+[ ] 70 - Climbing Stairs
+[ ] 746 - Min Cost Climbing Stairs
+
+[x] 198 - House Robber
+[ ] 213 - House Robber II
+[ ] 740 - Delete and Earn
+
+[ ] 55 - Jump Game
+[ ] 45 - Jump Game II
+
+[ ] 53 - Maximum Subarray
+[ ] 918 - Maximum Sum Circular Subarray
+
+[ ] 152 - Maximum Product Subarray
+[ ] 1567 - Maximum Length of Subarray With Positive Product
+
+[ ] 264 - Ugly Number (FAILED)
