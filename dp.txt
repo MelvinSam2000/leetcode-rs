@@ -1,5 +1,5 @@
 [x] 509 - Fibonacci Number
-[ ] 1137 - N-th Tribonacci Number
+[x] 1137 - N-th Tribonacci Number
 
 [ ] 70 - Climbing Stairs
 [ ] 746 - Min Cost Climbing Stairs
