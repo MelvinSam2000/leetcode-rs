@@ -1,4 +1,4 @@
-# Strings
+# 1. Strings
 [x] 125 - Valid Palindrome
 [x] 5 - Longest Palindromic Substring
 [ ] 3 - Longest Substring without repeating characters
@@ -6,12 +6,47 @@
 [ ] 49 - Group Anagrams
 [ ] 20 - Valid Parentheses
 
-# Dynamic Programming
+# 2. Dynamic Programming
 [x] 70 - Climbing Stairs
 [x] 198 - House Robber
 [ ] 55 - Jump Game
+[ ] 300 - Longest Increasing Subsequence
+[ ] 322 - Coin Change
 [ ] 62 - Unique Paths
 
-# Arrays
+# 3. Arrays
 [x] 217 - Contains Duplicate
+[ ] 238 - Product Of Array Except Self
+[ ] 11 - Container With Most Water
+[ ] 121 - Best time to buy and sell stock
+[ ] 1 - Two Sum
+[ ] 15 - Three Sum
 [ ] 53 - Maximum Subarray (Kadane)
+[ ] 152 - Maximum Product Subarray
+[ ] 153 - Minimum in Rotated Sorted Array
+[ ] 33 - Search in Rotated Sorted Array
+
+# 4. Interval
+[ ] 252 - Meeting Rooms (Locked)
+[ ] 435 - Non overlapping intervals
+[ ] 56 - Merge Intervals
+
+# 5. Matrix
+[ ] 54 - Spiral Matrix
+[ ] 73 - Set Matrix Zeroes
+[ ] 79 - Word Search
+
+# 6. LinkedList
+[ ] 206 - Reverse Linked List
+[ ] 141 - Linked List Cycle
+[ ] 19 - Remove Nth Node
+[ ] 21 - Merge 2 Lists
+
+# 7. Trees
+[ ] 200 - Number of Islands
+[ ] 226 - Invert Binary Tree
+[ ] 104 - Maximum Depth
+[ ] 102 - Level Order Traversal
+[ ] 100 - Same Tree
+[ ] 98 - Validate BST
+[ ] 235 - Lowest Common Ancestor
