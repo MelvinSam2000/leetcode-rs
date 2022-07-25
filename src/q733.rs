@@ -1,7 +1,7 @@
 /*
     733 - Flood Fill
-    Time: O(n^2)
-    Space: O(n^2)
+    Time: O(n*m)
+    Space: O(n*m)
 */
 pub fn flood_fill(mut image: Vec<Vec<i32>>, sr: i32, sc: i32, color: i32) -> Vec<Vec<i32>> {
     let m = image.len();

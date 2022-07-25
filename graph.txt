@@ -1,5 +1,5 @@
 [x] 733 - Flood Fill
-[ ] 200 - Number of Islands
+[x] 200 - Number of Islands
 
 [ ] 695 - Max Area of Island
 [ ] 1254 - Number of Closed Island
