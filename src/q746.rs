@@ -6,7 +6,7 @@
 pub fn min_cost_climbing_stairs(cost: Vec<i32>) -> i32 {
     use std::cmp::min;
     let n = cost.len();
-    
+
     if n == 2 {
         return min(cost[0], cost[1]);
     }
