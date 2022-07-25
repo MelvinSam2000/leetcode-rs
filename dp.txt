@@ -6,7 +6,7 @@
 
 [x] 198 - House Robber
 [x] 213 - House Robber II
-[ ] 740 - Delete and Earn
+[x] 740 - Delete and Earn
 
 [ ] 55 - Jump Game
 [ ] 45 - Jump Game II
