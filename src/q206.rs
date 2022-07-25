@@ -21,9 +21,7 @@ fn helper(head: Option<Box<ListNode>>, reversed: Option<Box<ListNode>>) -> Optio
 
 #[test]
 fn t1() {
-    let tcases = [
-        (vec![0, 1, 2, 3, 4], vec![4, 3, 2, 1, 0])
-    ];
+    let tcases = [(vec![0, 1, 2, 3, 4], vec![4, 3, 2, 1, 0])];
     for (param, out) in tcases {
         let param = Some(Box::new(param.into()));
         let res: Vec<i32> = (*reverse_list(param).unwrap()).into();

@@ -8,7 +8,7 @@
 [x] 213 - House Robber II *
 [x] 740 - Delete and Earn
 
-[ ] 55 - Jump Game
+[x] 55 - Jump Game
 [ ] 45 - Jump Game II
 
 [ ] 53 - Maximum Subarray
