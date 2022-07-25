@@ -17,7 +17,7 @@ pub fn is_palindrome(s: String) -> bool {
     if n <= 1 {
         return true;
     }
-    for i in 0..(n/2+1) {
+    for i in 0..(n / 2 + 1) {
         if s[i] != s[n - i - 1] {
             return false;
         }

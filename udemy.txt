@@ -13,5 +13,5 @@
 [ ] 62 - Unique Paths
 
 # Arrays
-[ ] 217 - Contains Duplicate
+[x] 217 - Contains Duplicate
 [ ] 53 - Maximum Subarray (Kadane)

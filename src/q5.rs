@@ -15,7 +15,7 @@ pub fn longest_palindrome(s: String) -> String {
             while v[l] == v[r] {
                 if lp.len() < s[l..=r].len() {
                     lp = &s[l..=r];
-                } 
+                }
                 if l == 0 || r == n - 1 {
                     break;
                 }
@@ -23,17 +23,13 @@ pub fn longest_palindrome(s: String) -> String {
                 r += 1;
             }
         }
-        
     }
     lp.to_owned()
 }
 
 #[test]
 fn t1() {
-    let tcases = [
-        ("babad", "bab"),
-        ("cbbd", "bb")
-    ];
+    let tcases = [("babad", "bab"), ("cbbd", "bb")];
     for (param, out) in tcases {
         assert_eq!(longest_palindrome(param.to_owned()), out.to_owned());
     }
