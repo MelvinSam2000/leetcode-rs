@@ -39,7 +39,7 @@
 # 6. LinkedList
 [x] 206 - Reverse Linked List *
 [-] 141 - Linked List Cycle (No Rust impl on leetcode)
-[ ] 19 - Remove Nth Node
+[x] 19 - Remove Nth Node From End
 [ ] 21 - Merge 2 Lists
 
 # 7. Trees
