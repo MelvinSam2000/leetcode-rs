@@ -19,7 +19,7 @@
 [ ] 238 - Product Of Array Except Self
 [ ] 11 - Container With Most Water
 [ ] 121 - Best time to buy and sell stock
-[ ] 1 - Two Sum
+[x] 1 - Two Sum *
 [ ] 15 - Three Sum
 [ ] 53 - Maximum Subarray (Kadane)
 [ ] 152 - Maximum Product Subarray

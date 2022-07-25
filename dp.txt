@@ -5,7 +5,7 @@
 [x] 746 - Min Cost Climbing Stairs
 
 [x] 198 - House Robber
-[x] 213 - House Robber II
+[x] 213 - House Robber II *
 [x] 740 - Delete and Earn
 
 [ ] 55 - Jump Game
