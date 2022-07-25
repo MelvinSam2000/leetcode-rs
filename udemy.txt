@@ -1,6 +1,6 @@
 # Strings
-[ ] 125 - Valid Palindrome
-[ ] 5 - Longest Palindromic Substring
+[x] 125 - Valid Palindrome
+[x] 5 - Longest Palindromic Substring
 [ ] 3 - Longest Substring without repeating characters
 [ ] 242 - Valid Anagram
 [ ] 49 - Group Anagrams
