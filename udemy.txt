@@ -1,3 +1,5 @@
+From Udemy course, originally completed in Nov 2020 in Python
+
 # 1. Strings
 [x] 125 - Valid Palindrome
 [x] 5 - Longest Palindromic Substring
@@ -43,7 +45,7 @@
 [ ] 21 - Merge 2 Lists
 
 # 7. Trees
-[ ] 200 - Number of Islands
+[x] 200 - Number of Islands
 [ ] 226 - Invert Binary Tree
 [ ] 104 - Maximum Depth
 [ ] 102 - Level Order Traversal
