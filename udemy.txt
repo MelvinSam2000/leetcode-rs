@@ -37,7 +37,7 @@
 [ ] 79 - Word Search
 
 # 6. LinkedList
-[ ] 206 - Reverse Linked List
+[x] 206 - Reverse Linked List *
 [ ] 141 - Linked List Cycle
 [ ] 19 - Remove Nth Node
 [ ] 21 - Merge 2 Lists
