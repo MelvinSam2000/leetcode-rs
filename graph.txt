@@ -15,5 +15,5 @@
 [ ] 1091 - Shortest path in binary Matrix
 [ ] 542 - 01 Matrix
 
-[x] 547 - Number of Provinces
+[x] 547 - Number of Provinces (# connected components)
 [ ] 1319 - Number of Operations to make network connected
