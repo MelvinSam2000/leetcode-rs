@@ -13,7 +13,7 @@ From Udemy course, originally completed in Nov 2020 in Python
 [x] 198 - House Robber
 [x] 55 - Jump Game
 [ ] 300 - Longest Increasing Subsequence
-[ ] 322 - Coin Change
+[x] 322 - Coin Change *
 [ ] 62 - Unique Paths
 
 # 3. Arrays
