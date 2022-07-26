@@ -23,7 +23,7 @@ From Udemy course, originally completed in Nov 2020 in Python
 [ ] 121 - Best time to buy and sell stock
 [x] 1 - Two Sum *
 [ ] 15 - Three Sum
-[ ] 53 - Maximum Subarray (Kadane)
+[x] 53 - Maximum Subarray (Kadane)
 [ ] 152 - Maximum Product Subarray
 [ ] 153 - Minimum in Rotated Sorted Array
 [ ] 33 - Search in Rotated Sorted Array

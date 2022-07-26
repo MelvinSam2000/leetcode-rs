@@ -13,7 +13,7 @@
 [x] 55 - Jump Game *
 [x] 45 - Jump Game II *
 
-[ ] 53 - Maximum Subarray
+[x] 53 - Maximum Subarray *
 [ ] 918 - Maximum Sum Circular Subarray
 
 [ ] 152 - Maximum Product Subarray
