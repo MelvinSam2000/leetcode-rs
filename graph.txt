@@ -11,3 +11,9 @@
 
 [ ] 1162 - As Far from land as possible
 [ ] 417 - Pacific Atlantic Water Flow
+
+[ ] 1091 - Shortest path in binary Matrix
+[ ] 542 - 01 Matrix
+
+[x] 547 - Number of Provinces
+[ ] 1319 - Number of Operations to make network connected
