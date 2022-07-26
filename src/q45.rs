@@ -5,7 +5,7 @@
 */
 pub fn jump(nums: Vec<i32>) -> i32 {
     use std::cmp::max;
-    let n = nums.len(); 
+    let n = nums.len();
     if n == 1 {
         return 0;
     }
