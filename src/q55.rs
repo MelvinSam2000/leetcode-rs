@@ -1,22 +1,18 @@
 /*
     55 - Jump Game
-    Time: O(n^2)
-    Space: O(n)
+    Time: O(n)
+    Space: O(1)
+    Note: Has 2 solutions, DP and greedy, greedy being most efficient
 */
 pub fn can_jump(nums: Vec<i32>) -> bool {
-    use std::cmp::min;
     let n = nums.len();
-    let mut dp = vec![false; n];
-    dp[0] = true;
-    for i in 0..n {
-        for j in 1..=min(nums[i] as usize, n - i - 1) {
-            dp[i + j] = dp[i];
-        }
-        if dp[n - 1] {
-            return true;
+    let mut goal = n - 1;
+    for i in (0..n).rev() {
+        if i + nums[i] as usize >= goal {
+            goal = i;
         }
     }
-    dp[n - 1]
+    goal == 0
 }
 
 #[test]
