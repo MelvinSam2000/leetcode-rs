@@ -6,7 +6,7 @@ From Udemy course, originally completed in Nov 2020 in Python
 [ ] 3 - Longest Substring without repeating characters
 [ ] 242 - Valid Anagram
 [ ] 49 - Group Anagrams
-[ ] 20 - Valid Parentheses
+[x] 20 - Valid Parentheses
 
 # 2. Dynamic Programming
 [x] 70 - Climbing Stairs

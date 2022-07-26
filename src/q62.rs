@@ -13,16 +13,8 @@ pub fn unique_paths(m: i32, n: i32) -> i32 {
             if i == j && j == 0 {
                 continue;
             }
-            let x1 = if i != 0 {
-                dp[i - 1][j]
-            } else {
-                0
-            };
-            let x2 = if j != 0 {
-                dp[i][j - 1]
-            } else {
-                0
-            };
+            let x1 = if i != 0 { dp[i - 1][j] } else { 0 };
+            let x2 = if j != 0 { dp[i][j - 1] } else { 0 };
             dp[i][j] = x1 + x2;
         }
     }
