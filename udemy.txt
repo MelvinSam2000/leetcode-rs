@@ -35,7 +35,7 @@ From Udemy course, originally completed in Nov 2020 in Python
 
 # 5. Matrix
 [ ] 54 - Spiral Matrix
-[ ] 73 - Set Matrix Zeroes
+[x] 73 - Set Matrix Zeroes **
 [ ] 79 - Word Search
 
 # 6. LinkedList
