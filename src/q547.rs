@@ -2,7 +2,7 @@
     547 - Number of Provinces
     Time: O(n^3)
     Space: O(n)
-    Note: Time is VERY unlikely to be O(n^3), 
+    Note: Time is VERY unlikely to be O(n^3),
     since it assumes union-find parent array becomes one linked list.
     Thus its average O(n^2).
     Adding a rank array to help balance the parents array can help mitigate this.
@@ -35,18 +35,9 @@ fn find(mut index: usize, parent: &[usize]) -> usize {
 
 #[test]
 fn t1() {
-    let tcases = [
-        (vec![
-            vec![1, 1, 0],
-            vec![1, 1, 0],
-            vec![0, 0, 1], 
-        ], 2)
-    ];
+    let tcases = [(vec![vec![1, 1, 0], vec![1, 1, 0], vec![0, 0, 1]], 2)];
 
     for (grid, count) in tcases {
         assert_eq!(find_circle_num(grid), count);
     }
 }
-
-
-
