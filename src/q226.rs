@@ -1,7 +1,7 @@
 use std::cell::RefCell;
 use std::rc::Rc;
 
-use crate::bst::TreeNode;
+use crate::others::bst::TreeNode;
 
 /*
     226 - Invert Binary Tree

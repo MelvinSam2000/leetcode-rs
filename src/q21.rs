@@ -1,4 +1,4 @@
-use crate::linkedlist::ListNode;
+use crate::others::linkedlist::ListNode;
 
 pub fn merge_two_lists(
     list1: Option<Box<ListNode>>,

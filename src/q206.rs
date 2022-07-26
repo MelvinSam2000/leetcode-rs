@@ -1,4 +1,4 @@
-use crate::linkedlist::ListNode;
+use crate::others::linkedlist::ListNode;
 
 /*
     206 - Reverse Linked List

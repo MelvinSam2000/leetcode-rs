@@ -1,8 +1,6 @@
 #![allow(clippy::needless_range_loop)]
 
-pub mod bst;
-pub mod linkedlist;
-pub mod nolc;
+pub mod others;
 pub mod q1;
 pub mod q104;
 pub mod q1137;

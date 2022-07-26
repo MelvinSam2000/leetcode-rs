@@ -1,4 +1,4 @@
-use crate::linkedlist::ListNode;
+use crate::others::linkedlist::ListNode;
 
 /*
     19 - Remove Nth Node From End
