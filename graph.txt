@@ -3,7 +3,7 @@
 [x] 733 - Flood Fill
 [x] 200 - Number of Islands
 
-[ ] 695 - Max Area of Island
+[x] 695 - Max Area of Island
 [ ] 1254 - Number of Closed Island
 
 [ ] 1020 - Number of Enclaves
