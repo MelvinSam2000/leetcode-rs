@@ -8,14 +8,17 @@ pub struct ListNode {
 
 impl ListNode {
     #[inline]
-    fn new(val: i32) -> Self {
+    pub fn new(val: i32) -> Self {
         ListNode { next: None, val }
     }
 }
 
-impl From<Vec<i32>> for ListNode {
-    fn from(elems: Vec<i32>) -> Self {
-        assert!(elems.len() > 1);
+impl TryFrom<Vec<i32>> for ListNode {
+    type Error = ();
+    fn try_from(elems: Vec<i32>) -> Result<Self, Self::Error> {
+        if elems.is_empty() {
+            return Err(());
+        }
         let mut head = ListNode::new(elems[0]);
         let mut tmp = Some(&mut head);
         for &i in &elems[1..] {
@@ -23,7 +26,7 @@ impl From<Vec<i32>> for ListNode {
             tmp.as_mut().unwrap().next = Some(node);
             tmp = tmp.unwrap().next.as_deref_mut();
         }
-        head
+        Ok(head)
     }
 }
 

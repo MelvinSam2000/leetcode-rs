@@ -42,7 +42,7 @@ From Udemy course, originally completed in Nov 2020 in Python
 [x] 206 - Reverse Linked List *
 [-] 141 - Linked List Cycle (No Rust impl on leetcode)
 [x] 19 - Remove Nth Node From End
-[ ] 21 - Merge 2 Lists
+[x] 21 - Merge 2 Lists
 
 # 7. Trees
 [x] 200 - Number of Islands
