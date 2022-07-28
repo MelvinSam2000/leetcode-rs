@@ -42,7 +42,7 @@ fn t1() {
             vec![(4, 3000), (5, 1000), (6, 4000)],
             10000,
             (3, 5),
-        )
+        ),
     ];
     for (forward_routes, return_routes, max_dist, expected) in tcases {
         assert_eq!(flights(forward_routes, return_routes, max_dist), expected);

@@ -1,2 +1,3 @@
 [x] 1584 - Min Cost to Connect All Points (Kruskal)
 [x] 146 - LRU Cache
+[x] 42 - Trapping Rain Water *
