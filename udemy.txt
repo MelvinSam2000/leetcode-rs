@@ -48,7 +48,7 @@ From Udemy course, originally completed in Nov 2020 in Python
 [x] 200 - Number of Islands
 [x] 226 - Invert Binary Tree
 [x] 104 - Maximum Depth
-[ ] 102 - Level Order Traversal
+[x] 102 - Level Order Traversal
 [ ] 100 - Same Tree
 [ ] 98 - Validate BST
 [ ] 235 - Lowest Common Ancestor
