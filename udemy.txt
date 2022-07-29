@@ -50,5 +50,5 @@ From Udemy course, originally completed in Nov 2020 in Python
 [x] 104 - Maximum Depth
 [x] 102 - Level Order Traversal
 [x] 100 - Same Tree
-[ ] 98 - Validate BST
+[x] 98 - Validate BST
 [ ] 235 - Lowest Common Ancestor
