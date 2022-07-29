@@ -4,8 +4,8 @@
     Space: O(n)
 */
 pub fn length_of_longest_substring(s: String) -> i32 {
-    use std::collections::HashSet;
     use std::cmp::max;
+    use std::collections::HashSet;
 
     let chars = s.as_bytes();
     let n = chars.len();
@@ -23,14 +23,9 @@ pub fn length_of_longest_substring(s: String) -> i32 {
     res as i32
 }
 
-
 #[test]
 fn t1() {
-    let tcases = [
-        ("abcabcbb", 3),
-        ("bbbbb", 1),
-        ("pwwkew", 3)
-    ];
+    let tcases = [("abcabcbb", 3), ("bbbbb", 1), ("pwwkew", 3)];
     for (param, expected) in tcases {
         assert_eq!(length_of_longest_substring(param.to_owned()), expected);
     }
