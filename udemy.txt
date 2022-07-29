@@ -34,7 +34,7 @@ From Udemy course, originally completed in Nov 2020 in Python
 [ ] 56 - Merge Intervals
 
 # 5. Matrix
-[ ] 54 - Spiral Matrix
+[x] 54 - Spiral Matrix
 [x] 73 - Set Matrix Zeroes **
 [ ] 79 - Word Search
 
