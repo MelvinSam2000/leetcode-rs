@@ -34,10 +34,8 @@ fn helper(
         helper(root.left.take(), fast, slow, res, first);
         *slow = *fast;
         *fast = root.val;
-        if !*first {
-            if *slow >= *fast {
-                *res = false;
-            }
+        if !*first && *slow >= *fast {
+            *res = false;
         }
         *first = false;
         helper(root.right.take(), fast, slow, res, first);
