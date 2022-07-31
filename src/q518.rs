@@ -3,6 +3,7 @@
     m = amount, n = len of coins vector
     Time: O(m*n)
     Space: O(m)
+    Note: Unbounded Knapsack Problem.
 */
 pub fn change(amount: i32, coins: Vec<i32>) -> i32 {
     let m = amount as usize + 1;
@@ -33,7 +34,7 @@ pub fn change_v2(amount: i32, coins: Vec<i32>) -> i32 {
         dp[0][j] = 1;
     }
     for i in 1..m {
-        for j in (0..n-1).rev() {
+        for j in (0..n - 1).rev() {
             dp[i][j] = dp[i][j + 1];
             if i as i32 - coins[j] >= 0 {
                 dp[i][j] += dp[i - coins[j] as usize][j];
