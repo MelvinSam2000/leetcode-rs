@@ -18,9 +18,8 @@ pub fn fib(n: i32) -> i32 {
 
 #[test]
 fn t1() {
-    use itertools::assert_equal;
-    let expected = [0, 1, 1, 2, 3, 5, 8, 13, 21].into_iter();
-    let answer = (0..expected.len() as i32).into_iter().map(fib);
-    println!("{:?}", answer.clone().collect::<Vec<_>>());
-    assert_equal(expected, answer);
+    let expected = vec![0, 1, 1, 2, 3, 5, 8, 13, 21];
+    let answer = (0..expected.len() as i32).map(fib).collect::<Vec<_>>();
+    println!("{:?}", answer);
+    assert_eq!(expected, answer);
 }

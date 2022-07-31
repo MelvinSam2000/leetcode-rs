@@ -15,9 +15,10 @@ pub fn climb_stairs(n: i32) -> i32 {
 
 #[test]
 fn t1() {
-    use itertools::assert_equal;
-    let expected = [1, 2, 3, 5, 8, 13, 21].into_iter();
-    let answer = (1..=expected.len() as i32).into_iter().map(climb_stairs);
-    println!("{:?}", answer.clone().collect::<Vec<_>>());
-    assert_equal(expected, answer);
+    let expected = vec![1, 2, 3, 5, 8, 13, 21];
+    let answer = (1..=expected.len() as i32)
+        .map(climb_stairs)
+        .collect::<Vec<_>>();
+    println!("{:?}", &answer);
+    assert_eq!(expected, answer);
 }

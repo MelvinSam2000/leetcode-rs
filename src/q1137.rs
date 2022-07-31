@@ -22,9 +22,10 @@ pub fn tribonacci(n: i32) -> i32 {
 
 #[test]
 fn t1() {
-    use itertools::assert_equal;
-    let expected = [0, 1, 1, 2, 4, 7, 13, 24, 44].into_iter();
-    let answer = (0..expected.len() as i32).into_iter().map(tribonacci);
-    println!("{:?}", answer.clone().collect::<Vec<_>>());
-    assert_equal(expected, answer);
+    let expected = vec![0, 1, 1, 2, 4, 7, 13, 24, 44];
+    let answer = (0..expected.len() as i32)
+        .map(tribonacci)
+        .collect::<Vec<_>>();
+    println!("{:?}", &answer);
+    assert_eq!(expected, answer);
 }
