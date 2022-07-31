@@ -1,5 +1,5 @@
-pub mod dlist;
 pub mod arr;
+pub mod dlist;
 
 #[test]
 fn t1() {
@@ -91,4 +91,3 @@ fn t2() {
     cache.put(5, 50);
     assert_cache(&cache, &[(5, 50), (2, 20), (3, 30)]);
 }
-

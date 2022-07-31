@@ -32,6 +32,7 @@ pub mod q45;
 pub mod q49;
 pub mod q5;
 pub mod q509;
+pub mod q518;
 pub mod q53;
 pub mod q54;
 pub mod q547;
