@@ -5,3 +5,4 @@
 [x] 37 - Sudoku Solver (Backtracking) *
 [x] 518 - Coin Change II (DP Unbounded Knapsack) *
 [x] 269 - Alien Dictionary (Locked, TopSort) *
+[x] 704 - Binary Search

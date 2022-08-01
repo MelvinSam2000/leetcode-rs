@@ -25,8 +25,8 @@ From Udemy course, originally completed in Nov 2020 in Python
 [ ] 15 - Three Sum
 [x] 53 - Maximum Subarray (Kadane)
 [ ] 152 - Maximum Product Subarray
-[ ] 153 - Minimum in Rotated Sorted Array
-[ ] 33 - Search in Rotated Sorted Array
+[x] 153 - Minimum in Rotated Sorted Array
+[x] 33 - Search in Rotated Sorted Array *
 
 # 4. Interval
 [ ] 252 - Meeting Rooms (Locked)
