@@ -10,6 +10,7 @@ pub mod q1137;
 pub mod q121;
 pub mod q125;
 pub mod q146;
+pub mod q152;
 pub mod q153;
 pub mod q1584;
 pub mod q19;
