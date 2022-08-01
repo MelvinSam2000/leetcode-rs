@@ -1,6 +1,7 @@
 [x] 1584 - Min Cost to Connect All Points (Kruskal)
-[x] 146 - LRU Cache
-[x] 42 - Trapping Rain Water *
+[x] 146 - LRU Cache (Doubly List)
+[x] 42 - Trapping Rain Water * 
 [x] 26 - Remove Duplicates Sorted Array *
-[x] 37 - Sudoku Solver *
-[x] 518 - Coin Change II *
+[x] 37 - Sudoku Solver (Backtracking) *
+[x] 518 - Coin Change II (DP Unbounded Knapsack) *
+[x] 269 - Alien Dictionary (Locked, TopSort) *
