@@ -56,4 +56,5 @@ pub mod q733;
 pub mod q740;
 pub mod q746;
 pub mod q79;
+pub mod q918;
 pub mod q98;

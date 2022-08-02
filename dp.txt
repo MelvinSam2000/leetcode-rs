@@ -14,7 +14,7 @@
 [x] 45 - Jump Game II *
 
 [x] 53 - Maximum Subarray *
-[ ] 918 - Maximum Sum Circular Subarray
+[x] 918 - Maximum Sum Circular Subarray *
 
 [ ] 152 - Maximum Product Subarray
 [ ] 1567 - Maximum Length of Subarray With Positive Product
