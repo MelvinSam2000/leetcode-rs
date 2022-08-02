@@ -43,3 +43,15 @@ impl From<ListNode> for Vec<i32> {
         }
     }
 }
+
+impl PartialOrd for ListNode {
+    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+        Some(self.val.cmp(&other.val))
+    }
+}
+
+impl Ord for ListNode {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        self.val.cmp(&other.val)
+    }
+}
