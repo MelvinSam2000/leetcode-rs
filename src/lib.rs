@@ -14,6 +14,7 @@ pub mod q15;
 pub mod q152;
 pub mod q153;
 pub mod q1584;
+pub mod q167;
 pub mod q19;
 pub mod q198;
 pub mod q20;
