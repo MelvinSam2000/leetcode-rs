@@ -16,7 +16,5 @@
 [x] 53 - Maximum Subarray *
 [x] 918 - Maximum Sum Circular Subarray *
 
-[ ] 152 - Maximum Product Subarray
+[x] 152 - Maximum Product Subarray
 [ ] 1567 - Maximum Length of Subarray With Positive Product
-
-[ ] 264 - Ugly Number (FAILED)
