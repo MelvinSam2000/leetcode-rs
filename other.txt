@@ -11,3 +11,4 @@
 [x] 167 - Two Sum II
 [x] 23 - Merge k sorted lists
 [x] 46 - Permutations
+[x] 204 - Count Primes
