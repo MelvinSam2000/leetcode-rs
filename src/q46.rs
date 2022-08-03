@@ -27,13 +27,3 @@ fn helper(available: &mut HashSet<i32>, permutation: &mut Vec<i32>, out: &mut Ve
         available.insert(elem);
     }
 }
-
-#[test]
-fn t1() {
-    let tcases = [(vec![1, 5, 4, 3, 2])];
-    for nums in tcases {
-        let out = permute(nums);
-        dbg!(&out, out.len());
-    }
-    panic!("DONE");
-}
