@@ -1,4 +1,8 @@
-#![allow(clippy::needless_range_loop)]
+#![allow(
+    clippy::needless_range_loop,
+    clippy::ptr_arg,
+    clippy::new_without_default
+)]
 
 pub mod others;
 pub mod q1;
@@ -23,6 +27,7 @@ pub mod q20;
 pub mod q200;
 pub mod q204;
 pub mod q206;
+pub mod q208;
 pub mod q21;
 pub mod q213;
 pub mod q217;

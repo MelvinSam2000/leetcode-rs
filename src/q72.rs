@@ -35,7 +35,7 @@ pub fn print_2d_array<T: std::fmt::Display>(arr: &Vec<Vec<T>>) {
         for j in 0..n {
             print!("{} ", arr[i][j]);
         }
-        println!("");
+        println!();
     }
 }
 

@@ -10,10 +10,8 @@ pub fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>>
     use std::collections::BinaryHeap;
 
     let mut heap = BinaryHeap::new();
-    for list in lists.into_iter() {
-        if let Some(node) = list {
-            heap.push(Reverse(node));
-        }
+    for list in lists.into_iter().flatten() {
+        heap.push(Reverse(list));
     }
 
     let mut out = Box::new(ListNode::new(0));
