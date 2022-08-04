@@ -13,18 +13,10 @@ pub fn game_of_life(board: &mut Vec<Vec<i32>>) {
     for i in 0..m {
         for j in 0..n {
             match (board[i][j], count((i, j), board, (m, n))) {
-                //(1, 0..=1 | 4..=8) => {
-                //    aux[i][j] = 0;
-                //}
-                (1, 2..=3) => {
+                (1, 2..=3) | (0, 3) => {
                     aux[i][j] = 1;
                 }
-                (0, 3) => {
-                    aux[i][j] = 1;
-                }
-                _ => {
-                    //aux[i][j] = board[i][j];
-                }
+                _ => {}
             }
         }
     }
