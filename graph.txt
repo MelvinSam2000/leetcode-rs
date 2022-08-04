@@ -17,3 +17,5 @@
 
 [x] 547 - Number of Provinces (# connected components)
 [ ] 1319 - Number of Operations to make network connected
+
+[x] 997 - Find the Town Judge
