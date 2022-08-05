@@ -18,3 +18,4 @@
 [x] 232 - Queue Using 2 Stacks
 [x] 202 - Happy Number
 [x] 622 - Design Circular Queue
+[x] 48 - Rotate Image
