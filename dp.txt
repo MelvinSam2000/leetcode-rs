@@ -1,4 +1,4 @@
-# Dynamic Programming I (Leetcode DP in a month)
+# Dynamic Programming I (Leetcode DP)
 
 [x] 509 - Fibonacci Number
 [x] 1137 - N-th Tribonacci Number
@@ -19,5 +19,50 @@
 [x] 152 - Maximum Product Subarray
 [x] 1567 - Maximum Length of Subarray With Positive Product
 
+[ ] 1014 - Best SightSeeing pair
+[x] 121 - Best time to buy & sell stock
+[ ] 122 - Best time to buy & sell stock II
+
+[ ] 309 - Best time to buy & sell stock w cooldown
+[ ] 714 - Best time to buy & sell stock w transaction fee
+
+[ ] 139 - Word break
+[x] 42 - Trapping rain water
+
+[ ] 413 - Arithmetic slices
+[ ] 91 - Decode ways
+
+[ ] 264 - Ugly Number II
+[ ] 96 - Unique Binary Search trees
+
 [x] 118 - Pascal's Triangle
 [x] 119 - Pascal's Triangle II
+
+[ ] 931 - Minimum falling path sum
+[ ] 120 - Triangle
+
+[ ] 1314 - Matrix Block Sum
+[ ] 304 - Range Sum Query 2D - Inmutable
+
+[x] 62 - Unique Paths
+[ ] 63 - Unique Paths II
+
+[ ] 64 - Minimum Path Sum 
+[ ] 221 - Maximal Square
+
+[x] 5 - Longest Palindromic Substring
+[ ] 516 - Longest Palindromic Subsequence
+
+[x] 300 - Longest Increasing Subsequence
+[ ] 376 - Wiggle Subsequence
+
+[ ] 392 - Is Subsequence
+[ ] 1143 - Longest Common Subsequence
+[x] 72 - Edit Distance
+
+[x] 322 - Coin Change
+[x] 518 - Coin Change II
+
+[ ] 377 - Combination Sum IV
+[ ] 343 - Integer break
+[ ] 279 - Perfect Squares
