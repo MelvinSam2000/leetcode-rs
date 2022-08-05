@@ -65,6 +65,7 @@ pub mod q547;
 pub mod q55;
 pub mod q56;
 pub mod q62;
+pub mod q622;
 pub mod q695;
 pub mod q70;
 pub mod q704;
