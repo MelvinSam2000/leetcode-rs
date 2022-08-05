@@ -17,7 +17,7 @@
 [x] 918 - Maximum Sum Circular Subarray *
 
 [x] 152 - Maximum Product Subarray
-[ ] 1567 - Maximum Length of Subarray With Positive Product
+[x] 1567 - Maximum Length of Subarray With Positive Product
 
 [x] 118 - Pascal's Triangle
 [x] 119 - Pascal's Triangle II
