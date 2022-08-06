@@ -53,11 +53,11 @@
 [x] 5 - Longest Palindromic Substring
 [ ] 516 - Longest Palindromic Subsequence
 
-[x] 300 - Longest Increasing Subsequence
+[x] 300 - Longest Increasing Subsequence *
 [ ] 376 - Wiggle Subsequence
 
 [ ] 392 - Is Subsequence
-[ ] 1143 - Longest Common Subsequence
+[x] 1143 - Longest Common Subsequence *
 [x] 72 - Edit Distance
 
 [x] 322 - Coin Change
