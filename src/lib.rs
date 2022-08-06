@@ -1,7 +1,8 @@
 #![allow(
     clippy::needless_range_loop,
     clippy::ptr_arg,
-    clippy::new_without_default
+    clippy::new_without_default,
+    non_snake_case
 )]
 
 pub mod others;
@@ -26,6 +27,7 @@ pub mod q1567;
 pub mod q1584;
 pub mod q167;
 pub mod q19;
+pub mod q191;
 pub mod q198;
 pub mod q20;
 pub mod q200;
