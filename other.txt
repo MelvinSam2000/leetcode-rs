@@ -20,3 +20,4 @@
 [x] 622 - Design Circular Queue
 [x] 48 - Rotate Image
 [x] 355 - Design Twitter
+[x] 796 - Rotate String
