@@ -5,25 +5,22 @@ use std::collections::HashSet;
     Time: O(n!)
     Space: O(n!)
 */
-pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
+pub fn permute(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
+    let n = nums.len();
     let mut out = vec![];
-    let mut available: HashSet<i32> = HashSet::from_iter(nums);
-    let mut permutation = vec![];
-    helper(&mut available, &mut permutation, &mut out);
+    helper(&mut nums, 0, n, &mut out);
     out
 }
 
-fn helper(available: &mut HashSet<i32>, permutation: &mut Vec<i32>, out: &mut Vec<Vec<i32>>) {
-    if available.is_empty() {
-        out.push(permutation.clone());
-        return;
-    }
-
-    for elem in available.clone().into_iter() {
-        available.remove(&elem);
-        permutation.push(elem);
-        helper(available, permutation, out);
-        permutation.pop();
-        available.insert(elem);
+fn helper(arr: &mut Vec<i32>, i: usize, n: usize, out: &mut Vec<Vec<i32>>) {
+    if i == n - 1 {
+        out.push(arr.clone());
+    } else {
+        helper(arr, i + 1, n, out);
+        for j in i + 1..n {
+            arr.swap(i, j);
+            helper(arr, i + 1, n, out);
+            arr.swap(i, j);
+        }
     }
 }
