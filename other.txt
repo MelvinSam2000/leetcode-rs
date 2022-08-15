@@ -10,7 +10,7 @@
 [x] 287 - Find Duplicate (Floyds) *
 [x] 167 - Two Sum II
 [x] 23 - Merge k sorted lists
-[x] 46 - Permutations **
+[x] 46 - Permutations
 [x] 204 - Count Primes
 [x] 289 - Game of Life **
 [x] 39 - Combination Sum
@@ -26,7 +26,8 @@
 [x] 136 - Single Number
 [x] 191 - Number of 1 bits
 [x] 190 - Reverse bits **
-[x] 169 - Majority Element
-[x] 28 - Str Str **
+[x] 169 - Majority Element *
+[x] 28 - Str Str ** (String matching)
 [x] 1603 - Parking System
 [x] 50 - Pow x n *
+[x] 215 - Kth Largest Element in array (QuickSelect)
