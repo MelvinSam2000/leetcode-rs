@@ -31,3 +31,4 @@
 [x] 1603 - Parking System
 [x] 50 - Pow x n *
 [x] 215 - Kth Largest Element in array (QuickSelect)
+[x] 295 - Find median from data stream
