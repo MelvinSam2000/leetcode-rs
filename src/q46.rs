@@ -1,5 +1,3 @@
-use std::collections::HashSet;
-
 /*
     46 - Permutations
     Time: O(n!)
