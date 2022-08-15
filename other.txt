@@ -27,3 +27,4 @@
 [x] 191 - Number of 1 bits
 [x] 190 - Reverse bits **
 [x] 169 - Majority Element
+[x] 28 - Str Str **
