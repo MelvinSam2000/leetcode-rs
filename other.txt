@@ -29,3 +29,4 @@
 [x] 169 - Majority Element
 [x] 28 - Str Str **
 [x] 1603 - Parking System
+[x] 50 - Pow x n *
