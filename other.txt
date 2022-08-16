@@ -33,3 +33,5 @@
 [x] 215 - Kth Largest Element in array (QuickSelect)
 [x] 295 - Find median from data stream
 [x] 207 - Course Schedule (Graph cycle detection) **
+[x] 387 - First Unique Char in String
+[ ] 743 - Network Delay Path
