@@ -36,3 +36,4 @@
 [x] 387 - First Unique Char in String
 [x] 743 - Network Delay Path * (Dijkstra)
 [x] 1823 - Josephus Permutation
+[ ] 587 - Erect Fence (Convex Hull)
