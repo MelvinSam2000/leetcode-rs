@@ -1,62 +1,80 @@
-//use std::collections::HashSet;
-
 /*
     587 - Erect Fence
-    Time: O(nlogn)
-    Space: O(nlogn)
-    Note: Convex Hull problem (using divide & conquer quick hull)
+    Time: O(nh)
+    Space: O(h)
+    Note: Convex Hull problem (using Jarvis march)
 */
-/*
 pub fn outer_trees(trees: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
     if trees.len() == 1 {
         return trees;
     }
-    let mut l = vec![];
-    let mut r = vec![];
-    for tree in trees {
-        if tree[0] < l[0] {
-            l = tree;
-        } else if tree[0] > r[0] {
-            r = tree;
+    let mut on_hull = &trees[0];
+    for tree in trees.iter() {
+        if tree[0] < on_hull[0] {
+            on_hull = tree;
         }
     }
-    let mut hull = vec![l.clone(), r.clone()];
-    let l = (l[0], l[1]);
-    let r = (r[0], r[1]);
-    let mut s1 = HashSet::new();
-    let mut s2 = HashSet::new();
-    find_hull(l, r, s1, &mut hull);
-    find_hull(l, r, s2, &mut hull);
+    let mut hull = vec![];
+    let mut collinear = vec![];
+    loop {
+        hull.push(on_hull.clone());
+        let mut next_point = &trees[0];
+        for tree in trees.iter() {
+            let o = orientation([on_hull, next_point, tree]);
+            if o == Orientation::CounterClockwise
+                || next_point[0] == on_hull[0] && next_point[1] == on_hull[1]
+            {
+                next_point = tree;
+            } else if o == Orientation::Colinear
+                && dist([on_hull, tree]) > dist([on_hull, next_point])
+            {
+                collinear.push(tree);
+                next_point = tree;
+            }
+        }
+        on_hull = next_point;
+        if on_hull[0] == hull[0][0] && on_hull[1] == hull[0][1] {
+            break;
+        }
+    }
+
+    let mut to_hull = vec![];
+    for segment in hull.windows(2) {
+        let (p1, p2) = (&segment[0], &segment[1]);
+        for candidate in collinear.iter() {
+            if !hull.contains(candidate)
+                && orientation([p1, p2, candidate]) == Orientation::Colinear
+            {
+                to_hull.push(candidate.clone());
+            }
+        }
+    }
+    for tree in to_hull {
+        hull.push(tree.clone());
+    }
+
     hull
 }
 
-fn find_hull(a: (i32, i32), b: (i32, i32), points: HashSet<(i32, i32)>, hull: &mut Vec<Vec<i32>>) {
-    if points.is_empty() {
-        return;
+#[derive(Eq, PartialEq)]
+enum Orientation {
+    Clockwise,
+    CounterClockwise,
+    Colinear,
+}
+
+fn orientation(p: [&Vec<i32>; 3]) -> Orientation {
+    use std::cmp::Ordering;
+    let ((x1, y1), (x2, y2), (x3, y3)) =
+        ((p[0][0], p[0][1]), (p[1][0], p[1][1]), (p[2][0], p[2][1]));
+    match ((y3 - y2) * (x2 - x1) - (y2 - y1) * (x3 - x2)).cmp(&0) {
+        Ordering::Less => Orientation::Clockwise,
+        Ordering::Equal => Orientation::Colinear,
+        Ordering::Greater => Orientation::CounterClockwise,
     }
 }
 
-fn point_furthest_from_segment(
-    points: &HashSet<(i32, i32)>,
-    segment: [(i32, i32); 2],
-) -> (i32, i32) {
-    let mut out = (0, 0);
-    for point in points.iter() {}
-    out
+fn dist(p: [&Vec<i32>; 2]) -> f64 {
+    let ((x1, y1), (x2, y2)) = ((p[0][0], p[0][1]), (p[1][0], p[1][1]));
+    (((x1 - x2).pow(2) + (y1 - y2).pow(2)) as f64).sqrt()
 }
-
-fn point_inside_triangle(point: (i32, i32), triangle: [(i32, i32); 3]) -> bool {
-    // https://stackoverflow.com/questions/2049582/how-to-determine-if-a-point-is-in-a-2d-triangle
-    // uses analytical solution to baricentric equation
-    let (px, py) = point;
-    let (p0x, p0y) = (triangle[0].0, triangle[0].1);
-    let (p1x, p1y) = (triangle[1].0, triangle[1].1);
-    let (p2x, p2y) = (triangle[2].0, triangle[2].1);
-    let area = 0.5 * (-p1y * p2x + p0y * (-p1x + p2x) + p0x * (p1y - p2y) + p1x * p2y) as f64;
-    let s =
-        1.0 / (2.0 * area) * (p0y * p2x - p0x * p2y + (p2y - p0y) * px + (p0x - p2x) * py) as f64;
-    let t =
-        1.0 / (2.0 * area) * (p0x * p1y - p0y * p1x + (p0y - p1y) * px + (p1x - p0x) * py) as f64;
-    0.0 <= s && s <= 1.0 && 0.0 <= t && t <= 1.0 && s + t <= 1.0
-}
-*/
