@@ -52,3 +52,4 @@
 [x] 463 - Island Perimeter
 [x] 66 - Plus One
 [x] 326 - Power of Three
+[x] 345 - Reverse Vowels of String
