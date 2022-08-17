@@ -47,3 +47,4 @@
 [x] 728 - Self dividing numbers
 [ ] 876 - Middle of linked list 
 [x] 344 - Reverse String 
+[x] 832 - Flipping Image

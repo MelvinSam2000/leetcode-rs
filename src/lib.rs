@@ -101,6 +101,7 @@ pub mod q746;
 pub mod q771;
 pub mod q79;
 pub mod q796;
+pub mod q832;
 pub mod q867;
 pub mod q9;
 pub mod q918;
