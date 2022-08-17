@@ -43,3 +43,4 @@
 [x] 7 - Reverse Integer
 [x] 771 - Jewels and Stones
 [x] 867 - Transpose Matrix
+[ ] 709 - To Lowercase
