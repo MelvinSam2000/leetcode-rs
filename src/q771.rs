@@ -6,7 +6,7 @@
 pub fn num_jewels_in_stones(jewels: String, stones: String) -> i32 {
     use std::collections::HashSet;
 
-    let jewels: HashSet<char> = HashSet::from_iter(jewels.chars().into_iter());
+    let jewels: HashSet<char> = HashSet::from_iter(jewels.chars());
     stones
         .chars()
         .filter(|stone| jewels.contains(stone))
