@@ -45,3 +45,5 @@
 [x] 867 - Transpose Matrix
 [x] 709 - To Lowercase
 [x] 728 - Self dividing numbers
+[ ] 876 - Middle of linked list 
+[x] 344 - Reverse String 
