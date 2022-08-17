@@ -50,3 +50,5 @@
 [x] 832 - Flipping Image
 [x] 657 - Robot Return to origin
 [x] 463 - Island Perimeter
+[x] 66 - Plus One
+[x] 326 - Power of Three
