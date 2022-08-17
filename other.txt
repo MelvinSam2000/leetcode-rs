@@ -37,3 +37,4 @@
 [x] 743 - Network Delay Path * (Dijkstra)
 [x] 1823 - Josephus Permutation
 [ ] 587 - Erect Fence (Convex Hull)
+[x] 278 - First Bad version
