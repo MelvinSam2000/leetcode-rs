@@ -40,3 +40,4 @@
 [x] 278 - First Bad version
 [x] 2 - Add 2 numbers
 [x] 9 - Palindrome Number
+[x] 7 - Reverse Integer
