@@ -1,6 +1,6 @@
 /*
     587 - Erect Fence
-    Time: O(nh)
+    Time: O(n*h)
     Space: O(h)
     Note: Convex Hull problem (using Jarvis march)
 */
@@ -15,7 +15,6 @@ pub fn outer_trees(trees: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         }
     }
     let mut hull = vec![];
-    let mut collinear = vec![];
     loop {
         hull.push(on_hull.clone());
         let mut next_point = &trees[0];
@@ -28,7 +27,7 @@ pub fn outer_trees(trees: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
             } else if o == Orientation::Colinear
                 && dist([on_hull, tree]) > dist([on_hull, next_point])
             {
-                collinear.push(tree);
+                on_hull = next_point;
                 next_point = tree;
             }
         }
@@ -36,21 +35,6 @@ pub fn outer_trees(trees: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
         if on_hull[0] == hull[0][0] && on_hull[1] == hull[0][1] {
             break;
         }
-    }
-
-    let mut to_hull = vec![];
-    for segment in hull.windows(2) {
-        let (p1, p2) = (&segment[0], &segment[1]);
-        for candidate in collinear.iter() {
-            if !hull.contains(candidate)
-                && orientation([p1, p2, candidate]) == Orientation::Colinear
-            {
-                to_hull.push(candidate.clone());
-            }
-        }
-    }
-    for tree in to_hull {
-        hull.push(tree.clone());
     }
 
     hull
