@@ -34,4 +34,5 @@
 [x] 295 - Find median from data stream
 [x] 207 - Course Schedule (Graph cycle detection) *
 [x] 387 - First Unique Char in String
-[x] 743 - Network Delay Path *
+[x] 743 - Network Delay Path * (Dijkstra)
+[x] 1823 - Josephus Permutation
