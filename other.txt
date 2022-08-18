@@ -54,3 +54,5 @@
 [x] 326 - Power of Three
 [x] 345 - Reverse Vowels of String
 [x] 10 - Regular Expression Matching *
+[x] 231 - Power of Two
+[x] 342 - Power of Four
