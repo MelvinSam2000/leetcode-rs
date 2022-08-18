@@ -53,3 +53,4 @@
 [x] 66 - Plus One
 [x] 326 - Power of Three
 [x] 345 - Reverse Vowels of String
+[x] 10 - Regular Expression Matching *

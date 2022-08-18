@@ -7,6 +7,7 @@
 
 pub mod others;
 pub mod q1;
+pub mod q10;
 pub mod q100;
 pub mod q1014;
 pub mod q102;
