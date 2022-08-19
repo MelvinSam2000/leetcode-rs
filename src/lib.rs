@@ -77,6 +77,7 @@ pub mod q355;
 pub mod q37;
 pub mod q387;
 pub mod q39;
+pub mod q41;
 pub mod q42;
 pub mod q435;
 pub mod q45;

@@ -41,14 +41,12 @@ pub fn max_profit_top_down(prices: Vec<i32>) -> i32 {
         }
     }
 
-    let mut dp = HashMap::new();
-    let out = helper(0, true, &mut dp, &prices);
-    out
+    helper(0, true, &mut HashMap::new(), &prices)
 }
 
 #[test]
 fn t1() {
-    let tcases = [(vec![1, 7, 2, 4], 7)];
+    let tcases = [(vec![1, 7, 2, 4], 6)];
     for (nums, expected) in tcases {
         assert_eq!(max_profit(nums), expected);
     }

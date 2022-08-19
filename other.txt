@@ -61,3 +61,4 @@
 [x] 680 - Valid Palindrome II
 [x] 205 - Isomorphic Strings
 [x] 155 - Min Stack
+[x] 41 - First Missing Positive *

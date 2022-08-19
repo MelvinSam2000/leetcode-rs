@@ -6,7 +6,7 @@
 pub fn word_pattern(pattern: String, s: String) -> bool {
     use std::collections::HashMap;
 
-    let s = s.split(" ").collect::<Vec<_>>();
+    let s = s.split(' ').collect::<Vec<_>>();
     let pattern = pattern.chars().collect::<Vec<_>>();
     if pattern.len() != s.len() {
         return false;
