@@ -59,3 +59,4 @@
 [x] 290 - Word Pattern
 [x] 1338 - Reduce Array Size by Half
 [x] 680 - Valid Palindrome II
+[x] 205 - Isomorphic Strings
