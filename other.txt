@@ -60,3 +60,4 @@
 [x] 1338 - Reduce Array Size by Half
 [x] 680 - Valid Palindrome II
 [x] 205 - Isomorphic Strings
+[x] 155 - Min Stack
