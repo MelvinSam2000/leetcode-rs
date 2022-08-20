@@ -56,7 +56,7 @@ impl WordDictionary {
         if node.next[val].is_none() {
             node.next[val] = Some(Box::new(TrieNode::new(word[0])));
         }
-        Self::add_word_helper(&mut node.next[val].as_mut().unwrap(), &word[1..])
+        Self::add_word_helper(node.next[val].as_mut().unwrap(), &word[1..])
     }
 
     fn search_word_helper(node: &TrieNode, word: &[u8]) -> bool {
