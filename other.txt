@@ -64,3 +64,4 @@
 [x] 41 - First Missing Positive *
 [x] 211 - Design Add and Search Word Data Structure
 [x] 941 - Valid Mountain Array
+[x] 263 - Ugly Number
