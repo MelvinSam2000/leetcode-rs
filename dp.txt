@@ -32,7 +32,7 @@
 [ ] 413 - Arithmetic slices
 [ ] 91 - Decode ways
 
-[ ] 264 - Ugly Number II
+[x] 264 - Ugly Number II *
 [ ] 96 - Unique Binary Search trees
 
 [x] 118 - Pascal's Triangle
