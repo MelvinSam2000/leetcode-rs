@@ -130,6 +130,7 @@ pub mod q796;
 pub mod q83;
 pub mod q832;
 pub mod q867;
+pub mod q876;
 pub mod q9;
 pub mod q918;
 pub mod q941;
