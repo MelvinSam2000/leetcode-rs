@@ -5,6 +5,7 @@
 160 - Intersection of Linked Lists
 133 - Clone Graph
 237 - Delete Node in a Linked List
+138 - Copy List with Random Pointer
 
 # Leetcode premium (solved anyway)
 269 - Alien Dictionary

@@ -2,26 +2,118 @@
 ## Neetcode 150
 
 1. Arrays & Hashing
+[x] 217 - Contains Duplicate
+[x] 242 - Valid Anagram
+[x] 1 - Two Sum 
+[x] 49 - Group Anagrams 
+[ ] 347 - Top k frequent elements 
+[x] 238 - Product of array except self 
+[ ] 36 - Valid Sudoku 
+[ ] 271 - Encode and Decode Strings (Locked)
+[ ] 128 - Longest Consecutive Sequence
 
 2. Two Pointers
+[x] 125 - Valid Palindrome
+[x] 167 - Two Sum II - Sorted input array 
+[x] 15 - 3Sum
+[x] 11 - Container with most water
+[x] 42 - Trapping Rain water
 
 3. Sliding Window
+[x] 121 - Best time to buy/sell stock 
+[x] 3 - Longest Substring without repeating chars 
+[ ] 424 - Longest repeating char replacement 
+[ ] 567 - Permutation in String 
+[ ] 76 - Minimum window substring 
+[ ] 239 - Sliding window maximum
 
 4. Stack
+[x] 20 - Valid Parentheses 
+[x] 155 - Min Stack 
+[ ] 150 - Evaluate Reverse Polish Notation 
+[ ] 22 - Generate Parentheses
+[ ] 739 - Daily Temperatures
+[ ] 853 - Car Fleet 
+[ ] 84 - Largest Rectangle in Histogram
 
 5. Binary Search
+[x] 704 - Binary Search 
+[ ] 74 - Search a 2d matrix 
+[ ] 875 - Koko eating bananas
+[x] 33 - Search in rotated sorted array 
+[x] 153 - Find minimum in rotated sorted array 
+[ ] 981 - Time based key value store 
+[ ] 4 - Median of 2 sorted arrays 
 
 6. Linked List
+[x] 206 - Reverse Linked List 
+[x] 21 - Merge 2 Sorted Lists 
+[ ] 143 - Reorder List 
+[x] 19 - Remove Nth Node from End of List 
+[-] 138 - Copy List with Random Pointer
+[x] 2 - Add 2 Numbers 
+[-] 141 - Linked List Cycle
+[x] 287 - Find the duplicate number 
+[x] 146 - LRU Cache 
+[x] 23 - Merge k sorted lists 
+[ ] 25 - Reverse nodes in k group
 
 7. Trees
+[x] 226 - Invert Binary Tree
+[x] 104 - Max Depth of Binary Tree 
+[ ] 543 - Diameter of Binary Tree 
+[ ] 110 - Balanced Binary Tree 
+[x] 100 - Same Tree 
+[ ] 572 - Subtree of another tree 
+[x] 235 - LCA of binary tree 
+[x] 102 - Binary Tree level order traversal
+[ ] 199 - Binary Tree Right side view 
+[ ] 1448 - Count good nodes in binary tree 
+[x] 98 - Validate BST 
+[ ] 230 - Kth Smallest Element in BST 
+[ ] 105 - Construct BST from Preorder and Inorder traversal 
+[ ] 124 - Binary Tree Max path sum 
+[ ] 297 - Serialize and Deserialize Binary Tree 
 
 8. Tries
+[x] 208 - Implement Prefix Trie
+[x] 211 - Design Add Search Word Data Structure
+[ ] 212 - Word Search II 
 
 9. Heap/Priority Queue
+[ ] 703 - Kth Largest Element in stream
+[ ] 1046 - Last Stone Weight
+[ ] 973 - K Closest Points to Origin
+[x] 215 - Kth Largest Element in array 
+[ ] 621 - Task Scheduler 
+[x] 355 - Design Twitter 
+[x] 295 - Find Median from Data stream
 
 10. Backtracking
+[ ] 78 - Subsets
+[x] 39 - Combination Sum
+[x] 46 - Permutations 
+[ ] 90 - Subsets II 
+[ ] 40 - Combination Sum II 
+[x] 79 - Word Search 
+[ ] 131 - Palindrome Partitioning
+[ ] 17 - Letter Combinations of Phone Number 
+[x] 51 - N Queens
 
 11. Graphs
+[x] 200 - Number of Islands 
+[ ] 133 - Clone Graph (No Rust Impl)
+[x] 695 - Max Area of Island
+[ ] 417 - Pacific Atlantic Waterflow
+[ ] 130 - Surrounnded Regions
+[ ] 994 - Rotting Oranges
+[ ] 286 - Walls and Gates (Locked)
+[x] 207 - Course Schedule 
+[x] 210 - Course Schedule II 
+[ ] 684 - Redundant Connection 
+[ ] 323 Number of Connected Components (Locked)
+[ ] 261 - Graph Valid Tree (Locked)
+[ ] 127 - Word Ladder
 
 12. Advanced Graphs
 [x] 322 - Reconstruct Itinerary
