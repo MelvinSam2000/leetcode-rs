@@ -5,3 +5,7 @@
 160 - Intersection of Linked Lists
 133 - Clone Graph
 237 - Delete Node in a Linked List
+
+# Leetcode premium (solved anyway)
+269 - Alien Dictionary
+252 - Meeting Rooms
