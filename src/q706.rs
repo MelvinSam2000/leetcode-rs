@@ -7,6 +7,8 @@ pub struct MyHashMap {
 
 /*
     706 - Design Hashmap
+    All operations are O(a(n)),
+    where a(n) is small assuming # of collisions is small
 */
 impl MyHashMap {
     pub fn new() -> Self {

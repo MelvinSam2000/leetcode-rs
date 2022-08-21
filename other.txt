@@ -78,3 +78,4 @@
 [x] 389 - Find the difference
 [x] 905 - Sort array by parity
 [x] 35 - Search Insert Position
+[x] 705 - Design HashSet
