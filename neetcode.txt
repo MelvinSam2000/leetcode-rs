@@ -1,0 +1,96 @@
+# https://neetcode.io/
+## Neetcode 150
+
+1. Arrays & Hashing
+
+2. Two Pointers
+
+3. Sliding Window
+
+4. Stack
+
+5. Binary Search
+
+6. Linked List
+
+7. Trees
+
+8. Tries
+
+9. Heap/Priority Queue
+
+10. Backtracking
+
+11. Graphs
+
+12. Advanced Graphs
+[x] 322 - Reconstruct Itinerary
+[x] 1584 - Min Cost to connect all points 
+[x] 743 - Network Delay Time 
+[ ] 778 - Swim in Rising Water 
+[x] 269 - Alien Dictionary (locked)
+[ ] 787 - Cheapest Flights within K stops
+
+13. DP 1-D
+[x] 70 - Climbing Stairs
+[x] 746 - Min Cost Climbing Stairs
+[x] 198 - House Robber 
+[x] 213 - House Robber II 
+[x] 5 - Longest Palindromic Substring 
+[ ] 647 - Palindromic Substrings
+[ ] 91 - Decode Ways 
+[x] 322 - Coin Change
+[x] 152 - Max Product Subarray
+[ ] 139 - Word break 
+[x] 300 - Longest Increasing Subsequence 
+[ ] 416 - Partition Equal Subset Sum
+
+14. DP 2-D 
+[x] 62 - Unique Paths
+[x] 1143 - Longest Common Subsequence
+[x] 309 - Best time to buy/sell stock w cooldown
+[x] 518 - Coin Change 2
+[ ] 494 - Target Sum 
+[ ] 97 - Interleaving String 
+[ ] 329 - Longest Increasing Path in Matrix 
+[ ] 115 - Distinct Subsequences
+[x] 72 - Edit Distance 
+[ ] 312 - Burst Balloons
+[x] 10 - Regular Expression Matching
+
+15. Greedy
+[x] 53 - Maximum Subarray
+[x] 55 - Jump Game
+[x] 45 - Jump Game II
+[ ] 134 - Gas Station
+[ ] 846 - Hand of Straights
+[ ] 1899 - Merge Triplets to form target Triplets
+[ ] 763 - Partition labels
+[ ] 678 - Valid Parenthesis String
+
+16. Intervals
+[ ] 57 - Insert Interval
+[x] 56 - Merge Intervals
+[x] 435 - Non Overlapping Intervals
+[x] 252 - Meeting Rooms (Locked)
+[ ] 253 - Meeting Rooms II (Locked)
+[ ] 1851 - Minimum Interval to include each query
+
+17. Math & Geometry
+[x] 48 - Rotate Image
+[x] 54 - Spiral Matrix
+[x] 73 - Set Matrix Zeroes
+[x] 202 - Happy Number
+[x] 66 - Plus One
+[x] 50 - Pow(x, n)
+[ ] 43 - Multiply Strings
+[ ] 2013 - Detect Squares 
+
+18. Bit Manipulation
+[x] 136 - Single Number
+[x] 191 - Number of 1 bits
+[ ] 338 - Counting bits
+[x] 190 - Reverse bits
+[x] 268 - Missing Number
+[ ] 371 - Sum of 2 integers
+[x] 7 - Reverse Integer
