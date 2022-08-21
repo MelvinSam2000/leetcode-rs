@@ -71,3 +71,4 @@
 [x] 101 - Symmetric Tree
 [x] 111 - Minimum Depth of BST
 [x] 234 - Palindrome Linked List
+[x] 83 - Delete Duplicates from Sorted List
