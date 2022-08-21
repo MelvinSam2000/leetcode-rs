@@ -1,0 +1,6 @@
+# Blacklisted problems
+
+# No Rust solutions:
+141 - Linked List Cycle
+160 - Intersection of Linked Lists
+133 - Clone Graph
