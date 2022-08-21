@@ -181,7 +181,7 @@
 18. Bit Manipulation
 [x] 136 - Single Number
 [x] 191 - Number of 1 bits
-[ ] 338 - Counting bits
+[x] 338 - Counting bits
 [x] 190 - Reverse bits
 [x] 268 - Missing Number
 [ ] 371 - Sum of 2 integers
