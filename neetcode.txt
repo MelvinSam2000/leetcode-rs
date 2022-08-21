@@ -184,5 +184,5 @@
 [x] 338 - Counting bits
 [x] 190 - Reverse bits
 [x] 268 - Missing Number
-[ ] 371 - Sum of 2 integers
+[x] 371 - Sum of 2 integers *
 [x] 7 - Reverse Integer
