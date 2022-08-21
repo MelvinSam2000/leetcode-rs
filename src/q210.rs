@@ -16,7 +16,7 @@ pub fn find_order(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> Vec<i32> {
     for edge in prerequisites {
         let (v1, v2) = (edge[0] as usize, edge[1] as usize);
         graph[v2].push(v1);
-        indeg[v2] += 1;
+        indeg[v1] += 1;
     }
 
     // O(V)
