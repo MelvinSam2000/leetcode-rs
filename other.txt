@@ -74,3 +74,4 @@
 [x] 83 - Delete Duplicates from Sorted List
 [x] 203 - Remove LinkedList Elements
 [x] 876 - Middle of Linked List
+[x] 706 - Design HashMap
