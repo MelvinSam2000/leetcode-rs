@@ -112,7 +112,7 @@
 [x] 210 - Course Schedule II 
 [ ] 684 - Redundant Connection 
 [ ] 323 Number of Connected Components (Locked)
-[ ] 261 - Graph Valid Tree (Locked)
+[x] 261 - Graph Valid Tree (Locked)
 [ ] 127 - Word Ladder
 
 12. Advanced Graphs
