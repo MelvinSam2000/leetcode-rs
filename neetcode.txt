@@ -129,7 +129,7 @@
 [x] 198 - House Robber 
 [x] 213 - House Robber II 
 [x] 5 - Longest Palindromic Substring 
-[ ] 647 - Palindromic Substrings
+[x] 647 - Palindromic Substrings **
 [x] 91 - Decode Ways 
 [x] 322 - Coin Change
 [x] 152 - Max Product Subarray
