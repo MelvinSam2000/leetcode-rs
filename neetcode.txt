@@ -133,7 +133,7 @@
 [x] 91 - Decode Ways 
 [x] 322 - Coin Change
 [x] 152 - Max Product Subarray
-[ ] 139 - Word break 
+[x] 139 - Word break 
 [x] 300 - Longest Increasing Subsequence 
 [ ] 416 - Partition Equal Subset Sum
 
