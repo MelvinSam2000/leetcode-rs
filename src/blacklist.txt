@@ -7,6 +7,6 @@
 237 - Delete Node in a Linked List
 138 - Copy List with Random Pointer
 
-# Leetcode premium (solved anyway)
+# Leetcode premium (solved on Lintcode)
 269 - Alien Dictionary
 252 - Meeting Rooms
