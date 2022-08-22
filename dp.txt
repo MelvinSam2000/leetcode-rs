@@ -30,7 +30,7 @@
 [x] 42 - Trapping rain water
 
 [ ] 413 - Arithmetic slices
-[ ] 91 - Decode ways
+[x] 91 - Decode ways
 
 [x] 264 - Ugly Number II *
 [ ] 96 - Unique Binary Search trees
