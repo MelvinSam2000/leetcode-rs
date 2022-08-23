@@ -10,7 +10,7 @@ pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
     let mut dp = vec![false; n + 1];
     dp[n] = true;
     for i in (0..n).rev() {
-        let f = || {
+        dp[i] = (|| {
             for word in word_dict.iter() {
                 let w = word.as_bytes();
                 let mut j = 0;
@@ -22,8 +22,7 @@ pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
                 }
             }
             false
-        };
-        dp[i] = f();
+        })();
     }
     dp[0]
 }

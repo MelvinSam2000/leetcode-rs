@@ -16,7 +16,7 @@ pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
         for j in 0..n {
             for word in words.iter() {
                 let w = word.as_bytes();
-                if dfs(&w, &trie, &board, &mut visited, (i, j), (m, n)) {
+                if dfs(w, &trie, &board, &mut visited, (i, j), (m, n)) {
                     result.insert(word.clone());
                 }
             }
@@ -27,7 +27,7 @@ pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
 
 fn build_trie(words: &Vec<String>) -> TrieNode {
     let mut trie = TrieNode::new(0);
-    for word in words.into_iter() {
+    for word in words.iter() {
         let word = word.clone() + "$";
         trie.insert(word.as_bytes());
     }
@@ -59,22 +59,22 @@ fn dfs(
         }
         visited[i][j] = true;
 
-        if i < m - 1 && dfs(&word[1..], &node, &board, visited, (i + 1, j), (m, n)) {
+        if i < m - 1 && dfs(&word[1..], node, board, visited, (i + 1, j), (m, n)) {
             visited[i][j] = false;
             return true;
         }
 
-        if i > 0 && dfs(&word[1..], &node, &board, visited, (i - 1, j), (m, n)) {
+        if i > 0 && dfs(&word[1..], node, board, visited, (i - 1, j), (m, n)) {
             visited[i][j] = false;
             return true;
         }
 
-        if j < n - 1 && dfs(&word[1..], &node, &board, visited, (i, j + 1), (m, n)) {
+        if j < n - 1 && dfs(&word[1..], node, board, visited, (i, j + 1), (m, n)) {
             visited[i][j] = false;
             return true;
         }
 
-        if j > 0 && dfs(&word[1..], &node, &board, visited, (i, j - 1), (m, n)) {
+        if j > 0 && dfs(&word[1..], node, board, visited, (i, j - 1), (m, n)) {
             visited[i][j] = false;
             return true;
         }
@@ -113,7 +113,7 @@ impl TrieNode {
         let node = self
             .children
             .entry(ch)
-            .or_insert(Box::new(TrieNode::new(word[0])));
+            .or_insert_with(|| Box::new(TrieNode::new(word[0])));
         Self::insert(node, &word[1..]);
     }
 }

@@ -135,14 +135,14 @@
 [x] 152 - Max Product Subarray
 [x] 139 - Word break 
 [x] 300 - Longest Increasing Subsequence 
-[ ] 416 - Partition Equal Subset Sum
+[x] 416 - Partition Equal Subset Sum
 
 14. DP 2-D 
 [x] 62 - Unique Paths
 [x] 1143 - Longest Common Subsequence
 [x] 309 - Best time to buy/sell stock w cooldown
 [x] 518 - Coin Change 2
-[ ] 494 - Target Sum 
+[ ] 494 - Target Sum
 [ ] 97 - Interleaving String 
 [ ] 329 - Longest Increasing Path in Matrix 
 [ ] 115 - Distinct Subsequences

@@ -14,7 +14,7 @@ pub fn count_substrings(s: String) -> i32 {
     // init p (p[i][j] tracks whether s[i..=j] is palindrome)
     for i in (0..n).rev() {
         for j in 0..n {
-            let next = if i < n - 1 && j > 0 && i + 1 <= j - 1 {
+            let next = if i < n - 1 && j > 0 && i < j - 1 {
                 p[i + 1][j - 1]
             } else {
                 true
