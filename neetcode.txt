@@ -22,7 +22,7 @@
 3. Sliding Window
 [x] 121 - Best time to buy/sell stock 
 [x] 3 - Longest Substring without repeating chars 
-[ ] 424 - Longest repeating char replacement 
+[x] 424 - Longest repeating char replacement *
 [ ] 567 - Permutation in String 
 [ ] 76 - Minimum window substring 
 [ ] 239 - Sliding window maximum
