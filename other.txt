@@ -79,3 +79,4 @@
 [x] 905 - Sort array by parity
 [x] 35 - Search Insert Position
 [x] 705 - Design HashSet
+[x] 172 - Factorial Trailing Zeroes 
