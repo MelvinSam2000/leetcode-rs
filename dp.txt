@@ -21,7 +21,7 @@
 
 [x] 1014 - Best Sightseeing pair *
 [x] 121 - Best time to buy & sell stock
-[ ] 122 - Best time to buy & sell stock II
+[x] 122 - Best time to buy & sell stock II *
 
 [x] 309 - Best time to buy & sell stock w cooldown **
 [ ] 714 - Best time to buy & sell stock w transaction fee
