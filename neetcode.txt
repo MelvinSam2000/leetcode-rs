@@ -142,7 +142,7 @@
 [x] 1143 - Longest Common Subsequence
 [x] 309 - Best time to buy/sell stock w cooldown
 [x] 518 - Coin Change 2
-[ ] 494 - Target Sum
+[x] 494 - Target Sum
 [ ] 97 - Interleaving String 
 [ ] 329 - Longest Increasing Path in Matrix 
 [ ] 115 - Distinct Subsequences
