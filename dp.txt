@@ -48,7 +48,7 @@
 [ ] 63 - Unique Paths II
 
 [x] 64 - Minimum Path Sum 
-[ ] 221 - Maximal Square
+[x] 221 - Maximal Square *
 
 [x] 5 - Longest Palindromic Substring
 [x] 516 - Longest Palindromic Subsequence *
