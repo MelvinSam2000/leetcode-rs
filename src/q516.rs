@@ -11,16 +11,14 @@ pub fn longest_palindrome_subseq(s: String) -> i32 {
         for j in i..n {
             dp[0][j] = if i == j {
                 1
-            } else {
-                if s[i] == s[j] {
-                    if i + 1 == j {
-                        2
-                    } else {
-                        2 + dp[1][j - 1]
-                    }
+            } else if s[i] == s[j] {
+                if i + 1 == j {
+                    2
                 } else {
-                    dp[1][j].max(dp[0][j - 1])
+                    2 + dp[1][j - 1]
                 }
+            } else {
+                dp[1][j].max(dp[0][j - 1])
             }
         }
         dp.swap(0, 1);
@@ -42,16 +40,14 @@ pub fn longest_palindrome_subseq_v2(s: String) -> i32 {
         for j in i..n {
             dp[i][j] = if i == j {
                 1
-            } else {
-                if s[i] == s[j] {
-                    if i + 1 == j {
-                        2
-                    } else {
-                        2 + dp[i + 1][j - 1]
-                    }
+            } else if s[i] == s[j] {
+                if i + 1 == j {
+                    2
                 } else {
-                    dp[i + 1][j].max(dp[i][j - 1])
+                    2 + dp[i + 1][j - 1]
                 }
+            } else {
+                dp[i + 1][j].max(dp[i][j - 1])
             }
         }
     }
