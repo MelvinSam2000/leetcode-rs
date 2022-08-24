@@ -45,7 +45,7 @@
 [ ] 304 - Range Sum Query 2D - Inmutable
 
 [x] 62 - Unique Paths
-[ ] 63 - Unique Paths II
+[x] 63 - Unique Paths II
 
 [x] 64 - Minimum Path Sum 
 [x] 221 - Maximal Square *

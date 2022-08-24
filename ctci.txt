@@ -118,7 +118,7 @@ Chapter 8: Recursion and Dynamic Programming
 [x] 1137. N-th Tribonacci Number
 
 8.2 Robot in a Grid
-[ ] 63. Unique Paths II
+[x] 63. Unique Paths II
 
 8.3 Magic Index - Not Found
 
