@@ -51,7 +51,7 @@
 [ ] 221 - Maximal Square
 
 [x] 5 - Longest Palindromic Substring
-[ ] 516 - Longest Palindromic Subsequence
+[x] 516 - Longest Palindromic Subsequence *
 
 [x] 300 - Longest Increasing Subsequence *
 [ ] 376 - Wiggle Subsequence
