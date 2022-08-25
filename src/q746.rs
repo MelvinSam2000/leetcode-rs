@@ -1,39 +1,34 @@
 /*
-    746 - Min Cost Climbing Stairs
+    746 - Min Cost Climbing Stairs (optimized)
     Time: O(n)
     Space: O(1)
 */
 pub fn min_cost_climbing_stairs(cost: Vec<i32>) -> i32 {
-    use std::cmp::min;
     let n = cost.len();
-
-    if n == 2 {
-        return min(cost[0], cost[1]);
-    }
-
-    let mut dp_2 = cost[0];
-    let mut dp_1 = cost[1];
-    let mut dp = 0;
-
+    let mut dp = [0, cost[1], cost[0]];
     for i in 2..n {
-        dp = cost[i] + min(dp_1, dp_2);
-        dp_2 = dp_1;
-        dp_1 = dp;
+        dp[0] = cost[i] + dp[1].min(dp[2]);
+        dp[2] = dp[1];
+        dp[1] = dp[0];
     }
-    min(dp, dp_2)
+    dp[1].min(dp[2])
 }
 
-// Previous version (Space O(n))
-fn _min_cost_climbing_stairs(cost: Vec<i32>) -> i32 {
-    use std::cmp::min;
+/*
+    746 - Min Cost Climbing Stairs
+    Time: O(n)
+    Space: O(n)
+    Note: Can be optimized to O(1) space
+*/
+pub fn min_cost_climbing_stairs_v2(cost: Vec<i32>) -> i32 {
     let n = cost.len();
     let mut dp = vec![0; n];
     dp[0] = cost[0];
     dp[1] = cost[1];
     for i in 2..n {
-        dp[i] = cost[i] + min(dp[i - 1], dp[i - 2]);
+        dp[i] = cost[i] + dp[i - 1].min(dp[i - 2]);
     }
-    min(dp[n - 1], dp[n - 2])
+    dp[n - 1].min(dp[n - 2])
 }
 
 #[test]
