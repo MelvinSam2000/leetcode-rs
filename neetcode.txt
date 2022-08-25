@@ -25,7 +25,7 @@
 [x] 424 - Longest repeating char replacement *
 [ ] 567 - Permutation in String 
 [ ] 76 - Minimum window substring 
-[ ] 239 - Sliding window maximum
+[x] 239 - Sliding window maximum (Mono Queue) *
 
 4. Stack
 [x] 20 - Valid Parentheses 
