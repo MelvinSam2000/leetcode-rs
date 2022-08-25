@@ -80,3 +80,4 @@
 [x] 35 - Search Insert Position
 [x] 705 - Design HashSet
 [x] 172 - Factorial Trailing Zeroes 
+[x] 383 - Ransom Note
