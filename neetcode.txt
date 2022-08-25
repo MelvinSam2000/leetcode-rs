@@ -32,7 +32,7 @@
 [x] 155 - Min Stack 
 [ ] 150 - Evaluate Reverse Polish Notation 
 [ ] 22 - Generate Parentheses
-[ ] 739 - Daily Temperatures
+[x] 739 - Daily Temperatures (Mono Stack) *
 [ ] 853 - Car Fleet 
 [ ] 84 - Largest Rectangle in Histogram
 
