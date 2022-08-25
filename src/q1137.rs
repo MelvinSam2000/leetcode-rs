@@ -8,14 +8,14 @@ pub fn tribonacci(n: i32) -> i32 {
         0 | 1 => n,
         2 => 1,
         _ => {
-            let (mut x, mut y, mut z, mut w) = (0, 1, 1, 0);
+            let mut dp = [0, 1, 1, 0];
             for _ in 2..n {
-                w = x + y + z;
-                x = y;
-                y = z;
-                z = w;
+                dp[0] = dp[1] + dp[2] + dp[3];
+                dp[3] = dp[2];
+                dp[2] = dp[1];
+                dp[1] = dp[0];
             }
-            w
+            dp[0]
         }
     }
 }

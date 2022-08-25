@@ -7,13 +7,13 @@ pub fn fib(n: i32) -> i32 {
     if n <= 1 {
         return n;
     }
-    let (mut x, mut y, mut z) = (0, 1, 0);
+    let mut dp = [0, 1, 0];
     for _ in 1..n {
-        z = x + y;
-        x = y;
-        y = z;
+        dp[0] = dp[1] + dp[2];
+        dp[2] = dp[1];
+        dp[1] = dp[0];
     }
-    z
+    dp[0]
 }
 
 #[test]
