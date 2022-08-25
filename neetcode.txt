@@ -146,8 +146,8 @@
 [ ] 97 - Interleaving String 
 [ ] 329 - Longest Increasing Path in Matrix 
 [ ] 115 - Distinct Subsequences
-[x] 72 - Edit Distance 
-[ ] 312 - Burst Balloons
+[x] 72 - Edit Distance *
+[x] 312 - Burst Balloons *
 [x] 10 - Regular Expression Matching
 
 15. Greedy
