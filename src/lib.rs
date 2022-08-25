@@ -102,6 +102,7 @@ pub mod q371;
 pub mod q387;
 pub mod q389;
 pub mod q39;
+pub mod q392;
 pub mod q41;
 pub mod q416;
 pub mod q42;

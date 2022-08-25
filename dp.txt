@@ -56,7 +56,7 @@
 [x] 300 - Longest Increasing Subsequence *
 [ ] 376 - Wiggle Subsequence
 
-[ ] 392 - Is Subsequence
+[x] 392 - Is Subsequence
 [x] 1143 - Longest Common Subsequence *
 [x] 72 - Edit Distance
 
