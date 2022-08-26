@@ -1,25 +1,25 @@
 /*
     322 - Coin Change
-    Time: O(n)
+    Time: O(n*m)
     Space: O(n)
 */
 pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 {
-    use std::cmp::min;
-
-    let mut dp = vec![amount + 1; amount as usize + 1];
+    let n = amount as usize;
+    let mut dp = vec![amount + 1; n + 1];
     dp[0] = 0;
-    for i in 0..=amount as usize {
-        for c in &coins {
-            let c = *c as usize;
+    for i in 0..=n {
+        for &coin in coins.iter() {
+            let c = coin as usize;
             if i >= c {
-                dp[i] = min(dp[i], 1 + dp[i - c]);
+                dp[i] = dp[i].min(1 + dp[i - c]);
             }
         }
     }
-    if dp[amount as usize] == amount + 1 {
-        return -1;
+    if dp[n] == amount + 1 {
+        -1
+    } else {
+        dp[n]
     }
-    dp[amount as usize]
 }
 
 #[test]
