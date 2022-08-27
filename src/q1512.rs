@@ -12,7 +12,6 @@ pub fn num_identical_pairs(nums: Vec<i32>) -> i32 {
             freq
         })
         .values()
-        .filter(|&&n| n >= 2)
         .map(|n| n * (n - 1) / 2)
         .sum()
 }
