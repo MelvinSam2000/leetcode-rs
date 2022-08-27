@@ -5,13 +5,12 @@
 */
 pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     use std::collections::HashMap;
-    let mut diff = HashMap::new();
-    for i in 0..nums.len() {
-        let cmp = target - nums[i];
-        if let Some(&x) = diff.get(&cmp) {
-            return vec![x, i as i32];
+    let mut m = HashMap::new();
+    for (j, &elem) in nums.iter().enumerate() {
+        if let Some(&i) = m.get(&elem) {
+            return vec![i as i32, j as i32];
         } else {
-            diff.insert(nums[i], i as i32);
+            m.insert(target - elem, j);
         }
     }
     unreachable!()
