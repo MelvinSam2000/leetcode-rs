@@ -4,24 +4,19 @@
     Space: O(1)
 */
 pub fn rob(nums: Vec<i32>) -> i32 {
-    use std::cmp::max;
-    let n = nums.len();
-    if n == 1 {
-        return nums[0];
+    match nums.len() {
+        1 => nums[0],
+        2 => nums[0].max(nums[1]),
+        n => {
+            let mut dp = [0, nums[0].max(nums[1]), nums[0]];
+            for i in 2..n {
+                dp[0] = dp[1].max(nums[i] + dp[2]);
+                dp[2] = dp[1];
+                dp[1] = dp[0];
+            }
+            dp[0]
+        }
     }
-    if n == 2 {
-        return max(nums[0], nums[1]);
-    }
-
-    let mut dp_2 = nums[0];
-    let mut dp_1 = max(nums[0], nums[1]);
-    let mut dp = 0;
-    for i in 2..n {
-        dp = max(dp_1, nums[i] + dp_2);
-        dp_2 = dp_1;
-        dp_1 = dp;
-    }
-    dp
 }
 
 //Previous version (Space O(n))
