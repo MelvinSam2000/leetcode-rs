@@ -31,6 +31,7 @@ pub mod q136;
 pub mod q139;
 pub mod q146;
 pub mod q15;
+pub mod q1512;
 pub mod q152;
 pub mod q153;
 pub mod q155;
