@@ -163,6 +163,7 @@ pub mod q9;
 pub mod q905;
 pub mod q91;
 pub mod q918;
+pub mod q931;
 pub mod q941;
 pub mod q96;
 pub mod q98;
