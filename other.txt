@@ -6,7 +6,7 @@
 [x] 518 - Coin Change II (DP Unbounded Knapsack) *
 [x] 269 - Alien Dictionary (Locked, TopSort) *
 [x] 704 - Binary Search
-[x] 72 - Edit Distance **
+[x] 72 - Edit Distance
 [x] 287 - Find Duplicate (Floyds) *
 [x] 167 - Two Sum II
 [x] 23 - Merge k sorted lists
