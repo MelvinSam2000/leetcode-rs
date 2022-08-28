@@ -118,10 +118,10 @@
 12. Advanced Graphs
 [x] 322 - Reconstruct Itinerary
 [x] 1584 - Min Cost to connect all points 
-[x] 743 - Network Delay Time 
+[x] 743 - Network Delay Time *
 [ ] 778 - Swim in Rising Water 
-[x] 269 - Alien Dictionary (locked)
-[ ] 787 - Cheapest Flights within K stops
+[x] 269 - Alien Dictionary (locked) *
+[x] 787 - Cheapest Flights within K stops *
 
 13. DP 1-D
 [x] 70 - Climbing Stairs
