@@ -90,7 +90,7 @@
 [x] 295 - Find Median from Data stream
 
 10. Backtracking
-[ ] 78 - Subsets
+[x] 78 - Subsets *
 [x] 39 - Combination Sum
 [x] 46 - Permutations 
 [ ] 90 - Subsets II 
