@@ -42,21 +42,14 @@ fn dfs(
     pos: (usize, usize),
     dim: (usize, usize),
 ) -> bool {
-    if word.is_empty() {
-        return false;
-    }
-
     let (m, n) = dim;
     let (i, j) = pos;
 
-    if board[i][j] != word[0] as char {
+    if word.is_empty() || board[i][j] != word[0] as char || visited[i][j] {
         return false;
     }
 
     if let Some(node) = trie.children.get(&word[0]) {
-        if visited[i][j] {
-            return false;
-        }
         visited[i][j] = true;
 
         if i < m - 1 && dfs(&word[1..], node, board, visited, (i + 1, j), (m, n)) {

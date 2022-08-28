@@ -9,7 +9,7 @@ pub struct LFUCache {
     cap: usize,
     len: usize,
     map: HashMap<i32, usize>,
-    entries: Vec<Box<Entry>>,
+    entries: Vec<Entry>,
 }
 
 struct Entry {
@@ -57,11 +57,11 @@ impl LFUCache {
             } else {
                 self.len += 1;
             }
-            let entry = Box::new(Entry {
+            let entry = Entry {
                 key,
                 value,
                 freq: 0,
-            });
+            };
             self.entries.push(entry);
             self.map.insert(key, self.len - 1);
             self.reorder(self.len - 1);
