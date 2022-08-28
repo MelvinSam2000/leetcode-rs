@@ -82,3 +82,4 @@
 [x] 172 - Factorial Trailing Zeroes 
 [x] 383 - Ransom Note
 [x] 1512 - Number of good pairs
+[ ] 460 - LFU Cache
