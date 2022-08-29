@@ -123,7 +123,7 @@ Chapter 8: Recursion and Dynamic Programming
 8.3 Magic Index - Not Found
 
 8.4 Power Set
-[ ] 78. Subsets
+[x] 78. Subsets
 
 8.5 Recursive Multiply
 [ ] 29. Divide Two Integers
@@ -137,7 +137,7 @@ Chapter 8: Recursion and Dynamic Programming
 [ ] 47. Permutations II
 
 8.9 Parens
-[ ] 22. Generate Parentheses
+[x] 22. Generate Parentheses
 
 8.10 Paint Fill
 [x] 733. Flood Fill
