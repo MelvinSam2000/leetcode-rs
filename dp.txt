@@ -29,7 +29,7 @@
 [x] 139 - Word break
 [x] 42 - Trapping rain water
 
-[ ] 413 - Arithmetic slices
+[x] 413 - Arithmetic slices *
 [x] 91 - Decode ways
 
 [x] 264 - Ugly Number II *
