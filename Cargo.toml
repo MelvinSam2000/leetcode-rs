@@ -4,5 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [profile.test]
+
+[dependencies]
+rand = "0.8.5"
 #opt-level = 3
 #lto = true

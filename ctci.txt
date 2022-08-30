@@ -87,7 +87,7 @@ Chapter 4: Trees and Graphs
 [x] 102. Binary Tree Level Order Traversal
 
 4.4 Check Balanced
-[ ] 110. Balanced Binary Tree
+[x] 110. Balanced Binary Tree
 
 4.5 Validate BST
 [x] 98. Validate Binary Search Tree
@@ -105,7 +105,7 @@ Chapter 4: Trees and Graphs
 [ ] 1569. Number of Ways to Reorder Array to Get Same BST
 
 4.10 Check Subtree
-[ ] 572. Subtree of Another Tree
+[x] 572. Subtree of Another Tree
 
 4.11 Random Node - Not Found
 
@@ -200,7 +200,7 @@ Chapter 16: Moderate
 [ ] 1275. Find Winner on a Tic Tac Toe Game
 
 16.5. Factorial Zeros
-[ ] 172. Factorial Trailing Zeroes
+[x] 172. Factorial Trailing Zeroes
 
 16.6. Smallest Difference - Not Found
 
@@ -319,7 +319,7 @@ Chapter 17: Hard
 [ ] 127. Word Ladder
 
 17.23. Max Black Square
-[ ] 221. Maximal Square
+[x] 221. Maximal Square
 
 17.24. Max Submatrix - Not Found
 

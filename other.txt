@@ -83,3 +83,4 @@
 [x] 383 - Ransom Note
 [x] 1512 - Number of good pairs
 [ ] 460 - LFU Cache
+[x] 380 - Insert Delete GetRandom O(1)
