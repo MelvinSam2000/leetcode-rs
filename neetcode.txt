@@ -145,10 +145,10 @@
 [x] 494 - Target Sum
 [x] 97 - Interleaving String 
 [x] 329 - Longest Increasing Path in Matrix *
-[ ] 115 - Distinct Subsequences
+[x] 115 - Distinct Subsequences *
 [x] 72 - Edit Distance *
 [x] 312 - Burst Balloons *
-[x] 10 - Regular Expression Matching
+[x] 10 - Regular Expression Matching *
 
 15. Greedy
 [x] 53 - Maximum Subarray
