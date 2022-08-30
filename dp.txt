@@ -24,7 +24,7 @@
 [x] 122 - Best time to buy & sell stock II *
 
 [x] 309 - Best time to buy & sell stock w cooldown **
-[ ] 714 - Best time to buy & sell stock w transaction fee
+[x] 714 - Best time to buy & sell stock w transaction fee *
 
 [x] 139 - Word break
 [x] 42 - Trapping rain water
