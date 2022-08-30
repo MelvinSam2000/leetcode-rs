@@ -84,3 +84,4 @@
 [x] 1512 - Number of good pairs
 [ ] 460 - LFU Cache
 [x] 380 - Insert Delete GetRandom O(1)
+[x] 535 - Encode and Decode TinyURL
