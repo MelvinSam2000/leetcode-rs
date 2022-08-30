@@ -64,7 +64,7 @@
 [ ] 543 - Diameter of Binary Tree 
 [ ] 110 - Balanced Binary Tree 
 [x] 100 - Same Tree 
-[ ] 572 - Subtree of another tree 
+[x] 572 - Subtree of another tree 
 [x] 235 - LCA of binary tree 
 [x] 102 - Binary Tree level order traversal
 [ ] 199 - Binary Tree Right side view 
