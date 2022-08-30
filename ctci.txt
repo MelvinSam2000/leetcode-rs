@@ -156,7 +156,7 @@ Chapter 8: Recursion and Dynamic Programming
 Chapter 10: Sorting and Searching
 
 10.1 Sorted Merge
-[ ] 88. Merge Sorted Array
+[x] 88. Merge Sorted Array *
 
 10.2 Group Anagrams
 [x] 49. Group Anagrams
