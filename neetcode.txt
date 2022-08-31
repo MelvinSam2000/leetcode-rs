@@ -48,7 +48,7 @@
 6. Linked List
 [x] 206 - Reverse Linked List 
 [x] 21 - Merge 2 Sorted Lists 
-[ ] 143 - Reorder List 
+[x] 143 - Reorder List *
 [x] 19 - Remove Nth Node from End of List 
 [-] 138 - Copy List with Random Pointer
 [x] 2 - Add 2 Numbers 
