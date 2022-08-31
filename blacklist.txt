@@ -5,7 +5,7 @@
 [p] 142 - Linked List Cycle II
 [p] 271 - Encode and Decode Strings
 [ ] 160 - Intersection of Linked Lists
-[ ] 133 - Clone Graph
+[p] 133 - Clone Graph
 [ ] 237 - Delete Node in a Linked List
 [ ] 138 - Copy List with Random Pointer
 
