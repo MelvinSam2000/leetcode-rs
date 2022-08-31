@@ -70,7 +70,7 @@
 [ ] 199 - Binary Tree Right side view 
 [ ] 1448 - Count good nodes in binary tree 
 [x] 98 - Validate BST 
-[ ] 230 - Kth Smallest Element in BST 
+[x] 230 - Kth Smallest Element in BST 
 [ ] 105 - Construct BST from Preorder and Inorder traversal 
 [ ] 124 - Binary Tree Max path sum 
 [ ] 297 - Serialize and Deserialize Binary Tree 
