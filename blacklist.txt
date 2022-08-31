@@ -1,8 +1,9 @@
 # Blacklisted problems
 
 # No Rust solutions (solved in Python):
-[x] 141 - Linked List Cycle
-[x] 142 - Linked List Cycle II
+[p] 141 - Linked List Cycle
+[p] 142 - Linked List Cycle II
+[p] 271 - Encode and Decode Strings
 [ ] 160 - Intersection of Linked Lists
 [ ] 133 - Clone Graph
 [ ] 237 - Delete Node in a Linked List
@@ -13,3 +14,4 @@
 [x] 252 - Meeting Rooms
 [x] 261 - Graph Valid Tree
 [/] 323 - Number of connected components (Solved 547 instead)
+[p] 271 - Encode and Decode Strings
