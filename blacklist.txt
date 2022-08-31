@@ -1,14 +1,15 @@
 # Blacklisted problems
 
-# No Rust solutions:
-141 - Linked List Cycle
-160 - Intersection of Linked Lists
-133 - Clone Graph
-237 - Delete Node in a Linked List
-138 - Copy List with Random Pointer
+# No Rust solutions (solved in Python):
+[x] 141 - Linked List Cycle
+[x] 142 - Linked List Cycle II
+[ ] 160 - Intersection of Linked Lists
+[ ] 133 - Clone Graph
+[ ] 237 - Delete Node in a Linked List
+[ ] 138 - Copy List with Random Pointer
 
 # Leetcode premium (solved on Lintcode)
-269 - Alien Dictionary
-252 - Meeting Rooms
-261 - Graph Valid Tree
-323 - Number of connected components (Solved 547 instead)
+[x] 269 - Alien Dictionary
+[x] 252 - Meeting Rooms
+[x] 261 - Graph Valid Tree
+[/] 323 - Number of connected components (Solved 547 instead)

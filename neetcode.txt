@@ -52,7 +52,7 @@
 [x] 19 - Remove Nth Node from End of List 
 [-] 138 - Copy List with Random Pointer
 [x] 2 - Add 2 Numbers 
-[-] 141 - Linked List Cycle
+[p] 141 - Linked List Cycle
 [x] 287 - Find the duplicate number 
 [x] 146 - LRU Cache 
 [x] 23 - Merge k sorted lists 

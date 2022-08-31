@@ -56,7 +56,7 @@ Chapter 2: Linked Lists
 [ ] 160. Intersection of Two Linked Lists
 
 2.8 Loop Detection
-[ ] 142. Linked List Cycle II
+[x] 142. Linked List Cycle II
 
 Chapter 3: Stacks and Queues
 
