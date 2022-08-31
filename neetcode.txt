@@ -9,7 +9,7 @@
 [x] 347 - Top k frequent elements 
 [x] 238 - Product of array except self 
 [ ] 36 - Valid Sudoku 
-[ ] 271 - Encode and Decode Strings (Locked)
+[p] 271 - Encode and Decode Strings (Locked)
 [x] 128 - Longest Consecutive Sequence
 
 2. Two Pointers
