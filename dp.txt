@@ -23,7 +23,7 @@
 [x] 121 - Best time to buy & sell stock
 [x] 122 - Best time to buy & sell stock II *
 
-[x] 309 - Best time to buy & sell stock w cooldown **
+[x] 309 - Best time to buy & sell stock w cooldown *
 [x] 714 - Best time to buy & sell stock w transaction fee *
 
 [x] 139 - Word break

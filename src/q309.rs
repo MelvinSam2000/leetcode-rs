@@ -1,10 +1,30 @@
 /*
     309 - Best time to buy/sell stock with cooldown
     Time: O(n)
-    Space: O(n)
-    Note: Can be optimized to use O(1) space
+    Space: O(1)
 */
 pub fn max_profit(prices: Vec<i32>) -> i32 {
+    let n = prices.len();
+    // buy: 0, sell: 1
+    let mut dp = [[0; 2]; 3];
+    dp[1][1] = prices[n - 1];
+    dp[2][1] = prices[n - 1];
+
+    for i in (0..n - 1).rev() {
+        dp[0][0] = dp[1][0].max(dp[1][1] - prices[i]);
+        dp[0][1] = dp[1][1].max(if i < n - 2 { dp[2][0] } else { 0 } + prices[i]);
+        dp[2] = dp[1];
+        dp[1] = dp[0];
+    }
+    dp[0][0]
+}
+
+/*
+    309 - Best time to buy/sell stock with cooldown (Unoptimized)
+    Time: O(n)
+    Space: O(n)
+*/
+pub fn max_profit_v2(prices: Vec<i32>) -> i32 {
     let n = prices.len();
     // buy: 0, sell: 1
     let mut dp = vec![[0, 0]; n];
