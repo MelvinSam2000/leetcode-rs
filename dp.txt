@@ -54,7 +54,7 @@
 [x] 516 - Longest Palindromic Subsequence *
 
 [x] 300 - Longest Increasing Subsequence *
-[ ] 376 - Wiggle Subsequence
+[x] 376 - Wiggle Subsequence *
 
 [x] 392 - Is Subsequence
 [x] 1143 - Longest Common Subsequence *
