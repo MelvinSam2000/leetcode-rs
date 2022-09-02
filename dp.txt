@@ -65,4 +65,4 @@
 
 [x] 377 - Combination Sum IV
 [x] 343 - Integer break *
-[ ] 279 - Perfect Squares
+[x] 279 - Perfect Squares
