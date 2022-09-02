@@ -64,5 +64,5 @@
 [x] 518 - Coin Change II
 
 [x] 377 - Combination Sum IV
-[ ] 343 - Integer break
+[x] 343 - Integer break *
 [ ] 279 - Perfect Squares
