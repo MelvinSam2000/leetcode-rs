@@ -129,6 +129,7 @@ pub mod q417;
 pub mod q42;
 pub mod q424;
 pub mod q435;
+pub mod q44;
 pub mod q45;
 pub mod q46;
 pub mod q460;
