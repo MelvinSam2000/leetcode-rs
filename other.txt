@@ -26,7 +26,7 @@
 [x] 136 - Single Number
 [x] 191 - Number of 1 bits
 [x] 190 - Reverse bits **
-[x] 169 - Majority Element *
+[x] 169 - Majority Element * (Boyer Moore Voting Algorithm)
 [x] 28 - Str Str ** (String matching)
 [x] 1603 - Parking System
 [x] 50 - Pow x n *
