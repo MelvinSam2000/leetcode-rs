@@ -3,21 +3,15 @@
     Time: O(n^2)
     Space: O(n)
 */
-pub fn get_row(row_index: i32) -> Vec<i32> {
-    use std::mem::swap;
-    let n = row_index as usize;
-
-    if n == 1 {
-        return vec![1, 1];
-    }
-
-    let mut vprev = vec![1; n + 1];
-    let mut vnext = vec![1; n + 1];
+pub fn get_row(n: i32) -> Vec<i32> {
+    let n = n as usize;
+    let mut dp: [Vec<i32>; 2] = [vec![1; n + 1], vec![1; n + 1]];
     for i in 2..=n {
         for j in 1..i {
-            vnext[j] = vprev[j] + vprev[j - 1];
+            dp[0][j] = dp[1][j] + dp[1][j - 1];
         }
-        swap(&mut vprev, &mut vnext);
+        dp.swap(0, 1);
     }
-    vprev
+    let [.., out] = dp;
+    out
 }
