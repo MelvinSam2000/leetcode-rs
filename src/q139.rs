@@ -9,20 +9,19 @@ pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
     let n = s.len();
     let mut dp = vec![false; n + 1];
     dp[n] = true;
-    for i in (0..n).rev() {
-        dp[i] = (|| {
-            for word in word_dict.iter() {
-                let w = word.as_bytes();
-                let mut j = 0;
-                while i + j < n && j < w.len() && s[i + j] == w[j] {
-                    j += 1;
-                }
-                if j == w.len() && dp[i + j] {
-                    return true;
-                }
+    'a: for i in (0..n).rev() {
+        for word in word_dict.iter() {
+            let w = word.as_bytes();
+            let mut j = 0;
+            while i + j < n && j < w.len() && s[i + j] == w[j] {
+                j += 1;
             }
-            false
-        })();
+            if j == w.len() && dp[i + j] {
+                dp[i] = true;
+                continue 'a;
+            }
+        }
+        dp[i] = false;
     }
     dp[0]
 }
