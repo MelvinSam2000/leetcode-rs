@@ -86,3 +86,4 @@
 [x] 380 - Insert Delete GetRandom O(1)
 [x] 535 - Encode and Decode TinyURL
 [x] 44 - Wildcard Matching
+[x] 678 - Valid Parenthesis String
