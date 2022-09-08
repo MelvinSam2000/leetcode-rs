@@ -78,7 +78,7 @@
 8. Tries
 [x] 208 - Implement Prefix Trie
 [x] 211 - Design Add Search Word Data Structure
-[ ] 212 - Word Search II 
+[x] 212 - Word Search II 
 
 9. Heap/Priority Queue
 [ ] 703 - Kth Largest Element in stream
