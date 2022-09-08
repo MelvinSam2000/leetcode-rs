@@ -14,7 +14,6 @@ pub fn find_words(
         let word = word.as_bytes();
         trie.add_word(word);
     }
-    dbg!(&trie);
 
     let (m, n) = (board.len(), board[0].len());
 
@@ -103,7 +102,7 @@ fn dfs(
     board[i][j] = ch;
 }
 
-#[derive(Default, Debug)]
+#[derive(Default)]
 struct TrieNode {
     is_word: bool,
     children: HashMap<char, TrieNode>,
