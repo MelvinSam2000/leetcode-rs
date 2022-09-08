@@ -17,8 +17,13 @@ fn ith_order_stat(nums: &mut [i32], i: usize) -> i32 {
             let p = partition(nums);
             match i.cmp(&p) {
                 Ordering::Equal => nums[i],
-                Ordering::Less => ith_order_stat(&mut nums[..p], i),
-                Ordering::Greater => ith_order_stat(&mut nums[p + 1..], i - p - 1),
+                Ordering::Less => {
+                    ith_order_stat(&mut nums[..p], i)
+                }
+                Ordering::Greater => ith_order_stat(
+                    &mut nums[p + 1..],
+                    i - p - 1,
+                ),
             }
         }
     }

@@ -12,7 +12,13 @@ pub fn exist(board: Vec<Vec<char>>, word: String) -> bool {
 
     for i in 0..m {
         for j in 0..n {
-            if helper(&board, word.as_bytes(), &mut visited, (i, j), (m, n)) {
+            if helper(
+                &board,
+                word.as_bytes(),
+                &mut visited,
+                (i, j),
+                (m, n),
+            ) {
                 return true;
             }
         }
@@ -47,16 +53,48 @@ fn helper(
     }
 
     visited[i][j] = true;
-    if i > 0 && helper(board, &word[1..], visited, (i - 1, j), dim) {
+    if i > 0
+        && helper(
+            board,
+            &word[1..],
+            visited,
+            (i - 1, j),
+            dim,
+        )
+    {
         return true;
     }
-    if j > 0 && helper(board, &word[1..], visited, (i, j - 1), dim) {
+    if j > 0
+        && helper(
+            board,
+            &word[1..],
+            visited,
+            (i, j - 1),
+            dim,
+        )
+    {
         return true;
     }
-    if i < m - 1 && helper(board, &word[1..], visited, (i + 1, j), dim) {
+    if i < m - 1
+        && helper(
+            board,
+            &word[1..],
+            visited,
+            (i + 1, j),
+            dim,
+        )
+    {
         return true;
     }
-    if j < n - 1 && helper(board, &word[1..], visited, (i, j + 1), dim) {
+    if j < n - 1
+        && helper(
+            board,
+            &word[1..],
+            visited,
+            (i, j + 1),
+            dim,
+        )
+    {
         return true;
     }
     visited[i][j] = false;

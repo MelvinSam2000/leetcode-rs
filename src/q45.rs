@@ -14,13 +14,15 @@ pub fn jump(nums: Vec<i32>) -> i32 {
     let mut max_covered = 0;
     for i in 0..n {
         if i == covered {
-            covered = max(max_covered, i + nums[i] as usize);
+            covered =
+                max(max_covered, i + nums[i] as usize);
             jumps += 1;
             if covered >= n - 1 {
                 return jumps;
             }
         } else {
-            max_covered = max(max_covered, i + nums[i] as usize)
+            max_covered =
+                max(max_covered, i + nums[i] as usize)
         }
     }
     jumps

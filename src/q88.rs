@@ -4,7 +4,12 @@
     Space: O(m + n)
     Note: Apparently can be done in O(1) space...
 */
-pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
+pub fn merge(
+    nums1: &mut Vec<i32>,
+    m: i32,
+    nums2: &mut Vec<i32>,
+    n: i32,
+) {
     let (m, n) = (m as usize, n as usize);
     let (mut i, mut j) = (0, 0);
     let mut res = vec![0; m + n];

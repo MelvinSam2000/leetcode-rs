@@ -6,7 +6,10 @@ use std::collections::HashSet;
     Time: O(m^2*n^2)
     Space: O(m*n)
 */
-pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
+pub fn find_words(
+    board: Vec<Vec<char>>,
+    words: Vec<String>,
+) -> Vec<String> {
     let trie = build_trie(&words);
     let m = board.len();
     let n = board[0].len();
@@ -16,7 +19,14 @@ pub fn find_words(board: Vec<Vec<char>>, words: Vec<String>) -> Vec<String> {
         for j in 0..n {
             for word in words.iter() {
                 let w = word.as_bytes();
-                if dfs(w, &trie, &board, &mut visited, (i, j), (m, n)) {
+                if dfs(
+                    w,
+                    &trie,
+                    &board,
+                    &mut visited,
+                    (i, j),
+                    (m, n),
+                ) {
                     result.insert(word.clone());
                 }
             }
@@ -45,29 +55,68 @@ fn dfs(
     let (m, n) = dim;
     let (i, j) = pos;
 
-    if word.is_empty() || board[i][j] != word[0] as char || visited[i][j] {
+    if word.is_empty()
+        || board[i][j] != word[0] as char
+        || visited[i][j]
+    {
         return false;
     }
 
     if let Some(node) = trie.children.get(&word[0]) {
         visited[i][j] = true;
 
-        if i < m - 1 && dfs(&word[1..], node, board, visited, (i + 1, j), (m, n)) {
+        if i < m - 1
+            && dfs(
+                &word[1..],
+                node,
+                board,
+                visited,
+                (i + 1, j),
+                (m, n),
+            )
+        {
             visited[i][j] = false;
             return true;
         }
 
-        if i > 0 && dfs(&word[1..], node, board, visited, (i - 1, j), (m, n)) {
+        if i > 0
+            && dfs(
+                &word[1..],
+                node,
+                board,
+                visited,
+                (i - 1, j),
+                (m, n),
+            )
+        {
             visited[i][j] = false;
             return true;
         }
 
-        if j < n - 1 && dfs(&word[1..], node, board, visited, (i, j + 1), (m, n)) {
+        if j < n - 1
+            && dfs(
+                &word[1..],
+                node,
+                board,
+                visited,
+                (i, j + 1),
+                (m, n),
+            )
+        {
             visited[i][j] = false;
             return true;
         }
 
-        if j > 0 && dfs(&word[1..], node, board, visited, (i, j - 1), (m, n)) {
+        if j > 0
+            && dfs(
+                &word[1..],
+                node,
+                board,
+                visited,
+                (i, j - 1),
+                (m, n),
+            )
+        {
             visited[i][j] = false;
             return true;
         }
@@ -103,10 +152,10 @@ impl TrieNode {
             return;
         }
         let ch = word[0];
-        let node = self
-            .children
-            .entry(ch)
-            .or_insert_with(|| Box::new(TrieNode::new(word[0])));
+        let node =
+            self.children.entry(ch).or_insert_with(|| {
+                Box::new(TrieNode::new(word[0]))
+            });
         Self::insert(node, &word[1..]);
     }
 }
@@ -137,7 +186,10 @@ fn t1() {
     ];
 
     for (board, words, res) in tcases {
-        let words = words.into_iter().map(|s| s.to_owned()).collect::<Vec<_>>();
+        let words = words
+            .into_iter()
+            .map(|s| s.to_owned())
+            .collect::<Vec<_>>();
         let mut out = find_words(board, words);
         out.sort();
         assert_eq!(out, res);

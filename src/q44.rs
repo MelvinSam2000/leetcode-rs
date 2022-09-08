@@ -15,9 +15,13 @@ pub fn is_match(s: String, p: String) -> bool {
     for i in (0..m).rev() {
         for j in (0..n).rev() {
             dp[0][j] = if p[j] == b'?' || s[i] == p[j] {
-                p[j] == b'$' || (i < m - 1 && j < n - 1 && dp[1][j + 1])
+                p[j] == b'$'
+                    || (i < m - 1
+                        && j < n - 1
+                        && dp[1][j + 1])
             } else if p[j] == b'*' {
-                (i < m - 1 && dp[1][j]) || (j < n - 1 && dp[0][j + 1])
+                (i < m - 1 && dp[1][j])
+                    || (j < n - 1 && dp[0][j + 1])
             } else {
                 false
             };
@@ -44,9 +48,13 @@ pub fn is_match_v2(s: String, p: String) -> bool {
     for i in (0..m).rev() {
         for j in (0..n).rev() {
             dp[i][j] = if p[j] == b'?' || s[i] == p[j] {
-                p[j] == b'$' || (i < m - 1 && j < n - 1 && dp[i + 1][j + 1])
+                p[j] == b'$'
+                    || (i < m - 1
+                        && j < n - 1
+                        && dp[i + 1][j + 1])
             } else if p[j] == b'*' {
-                (i < m - 1 && dp[i + 1][j]) || (j < n - 1 && dp[i][j + 1])
+                (i < m - 1 && dp[i + 1][j])
+                    || (j < n - 1 && dp[i][j + 1])
             } else {
                 false
             };

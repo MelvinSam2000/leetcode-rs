@@ -5,7 +5,9 @@ use crate::others::linkedlist::ListNode;
     Time: O(n)
     Space: O(n)
 */
-pub fn is_palindrome(mut head: Option<Box<ListNode>>) -> bool {
+pub fn is_palindrome(
+    mut head: Option<Box<ListNode>>,
+) -> bool {
     let mut stack = vec![];
     while let Some(node) = head.take() {
         stack.push(node.val);

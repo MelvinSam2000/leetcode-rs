@@ -4,7 +4,10 @@
     Space: O(V + E)
     Note: This uses DFS for cycle detection. An alternative is using Kahns algorithm
 */
-pub fn can_finish(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> bool {
+pub fn can_finish(
+    num_courses: i32,
+    prerequisites: Vec<Vec<i32>>,
+) -> bool {
     let num_courses = num_courses as usize;
     let mut graph = vec![vec![]; num_courses];
     for edge in prerequisites {
@@ -14,7 +17,14 @@ pub fn can_finish(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> bool {
     let mut dfs_stack = vec![false; num_courses];
     let mut visited = vec![false; num_courses];
     for v in 0..num_courses {
-        if !visited[v] && has_cycle(v, &graph, &mut visited, &mut dfs_stack) {
+        if !visited[v]
+            && has_cycle(
+                v,
+                &graph,
+                &mut visited,
+                &mut dfs_stack,
+            )
+        {
             return false;
         }
     }
@@ -29,7 +39,10 @@ fn has_cycle(
 ) -> bool {
     dfs_stack[v] = true;
     for &u in graph[v].iter() {
-        if !visited[u] && (dfs_stack[u] || has_cycle(u, graph, visited, dfs_stack)) {
+        if !visited[u]
+            && (dfs_stack[u]
+                || has_cycle(u, graph, visited, dfs_stack))
+        {
             return true;
         }
     }
@@ -245,7 +258,13 @@ fn t1() {
 
     for (n, graph, expected) in tcases {
         assert_eq!(
-            can_finish(n, graph.into_iter().map(|arr| arr.into()).collect()),
+            can_finish(
+                n,
+                graph
+                    .into_iter()
+                    .map(|arr| arr.into())
+                    .collect()
+            ),
             expected
         );
     }

@@ -8,7 +8,9 @@ use crate::others::bst::TreeNode;
     Time: O(n)
     Space: O(1) (O(n) counting recursion stack)
 */
-pub fn min_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+pub fn min_depth(
+    root: Option<Rc<RefCell<TreeNode>>>,
+) -> i32 {
     use std::cmp::min;
     match root {
         Some(root) => {
@@ -17,7 +19,12 @@ pub fn min_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
                 (None, None) => 1,
                 (None, Some(x)) => 1 + min_depth(Some(x)),
                 (Some(x), None) => 1 + min_depth(Some(x)),
-                (Some(l), Some(r)) => 1 + min(min_depth(Some(l)), min_depth(Some(r))),
+                (Some(l), Some(r)) => {
+                    1 + min(
+                        min_depth(Some(l)),
+                        min_depth(Some(r)),
+                    )
+                }
             }
         }
         None => 0,

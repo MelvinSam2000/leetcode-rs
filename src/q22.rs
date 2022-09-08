@@ -9,12 +9,24 @@ pub fn generate_parenthesis(n: i32) -> Vec<String> {
     res
 }
 
-fn helper(open: i32, close: i32, n: i32, output: String, res: &mut Vec<String>) {
+fn helper(
+    open: i32,
+    close: i32,
+    n: i32,
+    output: String,
+    res: &mut Vec<String>,
+) {
     if open == close && open == n {
         res.push(output.clone());
     }
     if open != n {
-        helper(open + 1, close, n, output.clone() + "(", res);
+        helper(
+            open + 1,
+            close,
+            n,
+            output.clone() + "(",
+            res,
+        );
     }
     if open > close {
         helper(open, close + 1, n, output + ")", res);

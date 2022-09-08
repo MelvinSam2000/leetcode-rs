@@ -6,7 +6,8 @@
 pub fn is_valid(s: String) -> bool {
     use std::collections::HashMap;
     let mut stack = Vec::new();
-    let open = HashMap::from([(')', '('), (']', '['), ('}', '{')]);
+    let open =
+        HashMap::from([(')', '('), (']', '['), ('}', '{')]);
     for ch in s.chars() {
         match ch {
             '(' | '[' | '{' => stack.push(ch),

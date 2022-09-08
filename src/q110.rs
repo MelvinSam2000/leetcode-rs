@@ -8,18 +8,25 @@ use crate::others::bst::TreeNode;
     Time: O(n)
     Space: O(1) (O(h) with recursion stack)
 */
-pub fn is_balanced(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
+pub fn is_balanced(
+    root: Option<Rc<RefCell<TreeNode>>>,
+) -> bool {
     helper(root).1
 }
 
-fn helper(node: Option<Rc<RefCell<TreeNode>>>) -> (i32, bool) {
+fn helper(
+    node: Option<Rc<RefCell<TreeNode>>>,
+) -> (i32, bool) {
     node.map(|node| {
         let mut node = node.borrow_mut();
         let (lheight, lbalanced) = helper(node.left.take());
-        let (rheight, rbalanced) = helper(node.right.take());
+        let (rheight, rbalanced) =
+            helper(node.right.take());
         (
             1 + lheight.max(rheight),
-            lbalanced && rbalanced && (lheight - rheight).abs() <= 1,
+            lbalanced
+                && rbalanced
+                && (lheight - rheight).abs() <= 1,
         )
     })
     .unwrap_or((0, true))

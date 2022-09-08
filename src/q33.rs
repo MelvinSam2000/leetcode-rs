@@ -42,17 +42,21 @@ fn find_min(nums: &[i32], l: usize, r: usize) -> usize {
 fn binary_search(nums: &[i32], target: i32) -> i32 {
     use std::cmp::Ordering;
     let m = nums.len() >> 1;
-    if nums.is_empty() || (nums.len() == 1 && nums[0] != target) {
+    if nums.is_empty()
+        || (nums.len() == 1 && nums[0] != target)
+    {
         return -1;
     }
 
     match target.cmp(&nums[m]) {
         Ordering::Equal => m as i32,
         Ordering::Less => binary_search(&nums[..m], target),
-        Ordering::Greater => match binary_search(&nums[m + 1..], target) {
-            -1 => -1,
-            i => m as i32 + i + 1,
-        },
+        Ordering::Greater => {
+            match binary_search(&nums[m + 1..], target) {
+                -1 => -1,
+                i => m as i32 + i + 1,
+            }
+        }
     }
 }
 
@@ -64,7 +68,14 @@ fn t1() {
         (vec![1], 0, -1),
         (vec![1, 3], 3, 1),
     ];
-    for (i, (nums, target, index)) in tcases.into_iter().enumerate() {
-        assert_eq!(search(nums, target), index, "Failed at test #{}", i);
+    for (i, (nums, target, index)) in
+        tcases.into_iter().enumerate()
+    {
+        assert_eq!(
+            search(nums, target),
+            index,
+            "Failed at test #{}",
+            i
+        );
     }
 }

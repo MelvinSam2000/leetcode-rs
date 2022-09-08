@@ -3,7 +3,11 @@
     Time: O(m*n)
     Space: O(n)
 */
-pub fn is_interleave(s1: String, s2: String, s3: String) -> bool {
+pub fn is_interleave(
+    s1: String,
+    s2: String,
+    s3: String,
+) -> bool {
     if s1.len() + s2.len() != s3.len() {
         return false;
     }
@@ -24,7 +28,9 @@ pub fn is_interleave(s1: String, s2: String, s3: String) -> bool {
                     i != m - 1 && s1[i] == s3[i + j],
                     j != n - 1 && s2[j] == s3[i + j],
                 ) {
-                    (true, true) => dp[1][j] || dp[0][j + 1],
+                    (true, true) => {
+                        dp[1][j] || dp[0][j + 1]
+                    }
                     (true, false) => dp[1][j],
                     (false, true) => dp[0][j + 1],
                     (false, false) => false,
@@ -41,7 +47,11 @@ pub fn is_interleave(s1: String, s2: String, s3: String) -> bool {
     Time: O(m*n)
     Space: O(m*n) (Can be optimized to O(n))
 */
-pub fn is_interleave_v2(s1: String, s2: String, s3: String) -> bool {
+pub fn is_interleave_v2(
+    s1: String,
+    s2: String,
+    s3: String,
+) -> bool {
     if s1.len() + s2.len() != s3.len() {
         return false;
     }
@@ -62,7 +72,9 @@ pub fn is_interleave_v2(s1: String, s2: String, s3: String) -> bool {
                     i != m - 1 && s1[i] == s3[i + j],
                     j != n - 1 && s2[j] == s3[i + j],
                 ) {
-                    (true, true) => dp[i + 1][j] || dp[i][j + 1],
+                    (true, true) => {
+                        dp[i + 1][j] || dp[i][j + 1]
+                    }
                     (true, false) => dp[i + 1][j],
                     (false, true) => dp[i][j + 1],
                     (false, false) => false,

@@ -25,8 +25,12 @@ pub fn length_of_longest_substring(s: String) -> i32 {
 
 #[test]
 fn t1() {
-    let tcases = [("abcabcbb", 3), ("bbbbb", 1), ("pwwkew", 3)];
+    let tcases =
+        [("abcabcbb", 3), ("bbbbb", 1), ("pwwkew", 3)];
     for (param, expected) in tcases {
-        assert_eq!(length_of_longest_substring(param.to_owned()), expected);
+        assert_eq!(
+            length_of_longest_substring(param.to_owned()),
+            expected
+        );
     }
 }

@@ -16,12 +16,19 @@ pub fn lowest_common_ancestor(
     helper(root, p?.borrow().val, q?.borrow().val)
 }
 
-fn helper(root: Option<Rc<RefCell<TreeNode>>>, p: i32, q: i32) -> Option<Rc<RefCell<TreeNode>>> {
+fn helper(
+    root: Option<Rc<RefCell<TreeNode>>>,
+    p: i32,
+    q: i32,
+) -> Option<Rc<RefCell<TreeNode>>> {
     use std::cmp::Ordering::*;
     let root = root?;
     let r = root.borrow();
     match (r.val.cmp(&p), r.val.cmp(&q)) {
-        (Equal, _) | (_, Equal) | (Greater, Less) | (Less, Greater) => {
+        (Equal, _)
+        | (_, Equal)
+        | (Greater, Less)
+        | (Less, Greater) => {
             drop(r);
             Some(root)
         }

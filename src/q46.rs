@@ -10,7 +10,12 @@ pub fn permute(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
     out
 }
 
-fn helper(arr: &mut Vec<i32>, i: usize, n: usize, out: &mut Vec<Vec<i32>>) {
+fn helper(
+    arr: &mut Vec<i32>,
+    i: usize,
+    n: usize,
+    out: &mut Vec<Vec<i32>>,
+) {
     if i == n - 1 {
         out.push(arr.clone());
     } else {

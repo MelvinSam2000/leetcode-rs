@@ -27,5 +27,8 @@ pub fn is_anagram(s: String, t: String) -> bool {
 
 #[test]
 fn t1() {
-    assert!(is_anagram("anagram".to_owned(), "nagaram".to_owned()));
+    assert!(is_anagram(
+        "anagram".to_owned(),
+        "nagaram".to_owned()
+    ));
 }

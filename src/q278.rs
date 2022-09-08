@@ -35,7 +35,12 @@ impl Api {
 
 #[test]
 fn t1() {
-    let tcases = [(3, 4), (50, 100), (2000, 2001), (1702766719, 2126753390)];
+    let tcases = [
+        (3, 4),
+        (50, 100),
+        (2000, 2001),
+        (1702766719, 2126753390),
+    ];
     for (bad, n) in tcases {
         assert_eq!(Api(bad).first_bad_version(n), bad);
     }

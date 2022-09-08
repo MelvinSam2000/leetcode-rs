@@ -5,7 +5,10 @@ use crate::others::linkedlist::ListNode;
     Time: O(n)
     Space: O(1)
 */
-pub fn remove_elements(head: Option<Box<ListNode>>, val: i32) -> Option<Box<ListNode>> {
+pub fn remove_elements(
+    head: Option<Box<ListNode>>,
+    val: i32,
+) -> Option<Box<ListNode>> {
     let mut new_head = Some(Box::new(ListNode {
         val: val + 1,
         next: head,

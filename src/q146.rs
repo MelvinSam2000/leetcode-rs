@@ -85,9 +85,11 @@ impl LRUCache {
                 self.len += 1;
                 if self.len > self.capacity {
                     if let Some(node) = self.pop_lru() {
-                        self.map.remove(&unsafe { &*node }.key);
+                        self.map
+                            .remove(&unsafe { &*node }.key);
                         self.len -= 1;
-                        let _ = unsafe { Box::from_raw(node) };
+                        let _ =
+                            unsafe { Box::from_raw(node) };
                     };
                 }
             }
@@ -168,8 +170,14 @@ impl Iterator for IterLRU {
 
 #[test]
 fn t1() {
-    fn assert_cache(cache: &LRUCache, expected: &[(i32, i32)]) {
-        assert_eq!(&cache.iter().collect::<Vec<_>>(), expected);
+    fn assert_cache(
+        cache: &LRUCache,
+        expected: &[(i32, i32)],
+    ) {
+        assert_eq!(
+            &cache.iter().collect::<Vec<_>>(),
+            expected
+        );
     }
 
     let mut cache = LRUCache::new(2);
@@ -214,8 +222,14 @@ fn t1() {
 
 #[test]
 fn t2() {
-    fn assert_cache(cache: &LRUCache, expected: &[(i32, i32)]) {
-        assert_eq!(&cache.iter().collect::<Vec<_>>(), expected);
+    fn assert_cache(
+        cache: &LRUCache,
+        expected: &[(i32, i32)],
+    ) {
+        assert_eq!(
+            &cache.iter().collect::<Vec<_>>(),
+            expected
+        );
     }
 
     let mut cache = LRUCache::new(3);

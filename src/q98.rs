@@ -8,7 +8,9 @@ use crate::others::bst::TreeNode;
     Time: O(n)
     Space: O(1)
 */
-pub fn is_valid_bst(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
+pub fn is_valid_bst(
+    root: Option<Rc<RefCell<TreeNode>>>,
+) -> bool {
     match root {
         None => true,
         Some(root) => {
@@ -16,7 +18,13 @@ pub fn is_valid_bst(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
             let mut first = true;
             let mut slow = 0;
             let mut fast = std::i32::MIN;
-            helper(Some(root), &mut fast, &mut slow, &mut res, &mut first);
+            helper(
+                Some(root),
+                &mut fast,
+                &mut slow,
+                &mut res,
+                &mut first,
+            );
             res
         }
     }

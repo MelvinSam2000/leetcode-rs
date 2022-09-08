@@ -17,7 +17,10 @@ pub fn can_jump(nums: Vec<i32>) -> bool {
 
 #[test]
 fn t1() {
-    let tcases = [(vec![2, 3, 1, 1, 4], true), (vec![3, 2, 1, 0, 4], false)];
+    let tcases = [
+        (vec![2, 3, 1, 1, 4], true),
+        (vec![3, 2, 1, 0, 4], false),
+    ];
     for (param, res) in tcases {
         assert_eq!(can_jump(param), res);
     }

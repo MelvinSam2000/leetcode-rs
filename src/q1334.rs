@@ -4,7 +4,11 @@
     Space: O(V^2)
     Note - Uses Floyd Warshall APSP algorithm
 */
-pub fn find_the_city(n: i32, edges: Vec<Vec<i32>>, distance_threshold: i32) -> i32 {
+pub fn find_the_city(
+    n: i32,
+    edges: Vec<Vec<i32>>,
+    distance_threshold: i32,
+) -> i32 {
     use std::i32::MAX;
 
     // build adj matrix O(E)
@@ -14,7 +18,8 @@ pub fn find_the_city(n: i32, edges: Vec<Vec<i32>>, distance_threshold: i32) -> i
         graph[i][i] = 0;
     }
     for edge in edges {
-        let (v1, v2, w) = (edge[0] as usize, edge[1] as usize, edge[2]);
+        let (v1, v2, w) =
+            (edge[0] as usize, edge[1] as usize, edge[2]);
         graph[v1][v2] = w;
         graph[v2][v1] = w;
     }
@@ -23,7 +28,10 @@ pub fn find_the_city(n: i32, edges: Vec<Vec<i32>>, distance_threshold: i32) -> i
     for k in 0..n {
         for i in 0..n {
             for j in 0..n {
-                if graph[i][k] < MAX && graph[k][j] < MAX && graph[i][j] > graph[i][k] + graph[k][j]
+                if graph[i][k] < MAX
+                    && graph[k][j] < MAX
+                    && graph[i][j]
+                        > graph[i][k] + graph[k][j]
                 {
                     graph[i][j] = graph[i][k] + graph[k][j];
                 }

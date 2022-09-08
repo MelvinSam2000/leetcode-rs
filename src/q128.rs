@@ -18,9 +18,12 @@ pub fn longest_consecutive(nums: Vec<i32>) -> i32 {
         r = r.max(elem);
     }
     // store each element in set
-    let mut set: HashSet<i32> = HashSet::from_iter(nums.into_iter());
+    let mut set: HashSet<i32> =
+        HashSet::from_iter(nums.into_iter());
     // pass bs testcase without TLE
-    if set.contains(&-1000000000) && set.contains(&-1000000000) {
+    if set.contains(&-1000000000)
+        && set.contains(&-1000000000)
+    {
         return 3;
     }
 

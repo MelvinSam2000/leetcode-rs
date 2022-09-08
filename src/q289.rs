@@ -12,7 +12,10 @@ pub fn game_of_life(board: &mut Vec<Vec<i32>>) {
 
     for i in 0..m {
         for j in 0..n {
-            match (board[i][j], count((i, j), board, (m, n))) {
+            match (
+                board[i][j],
+                count((i, j), board, (m, n)),
+            ) {
                 (1, 2..=3) | (0, 3) => {
                     aux[i][j] = 1;
                 }
@@ -23,7 +26,11 @@ pub fn game_of_life(board: &mut Vec<Vec<i32>>) {
     swap(board, &mut aux);
 }
 
-fn count(pos: (usize, usize), board: &Vec<Vec<i32>>, dim: (usize, usize)) -> usize {
+fn count(
+    pos: (usize, usize),
+    board: &Vec<Vec<i32>>,
+    dim: (usize, usize),
+) -> usize {
     let (m, n) = dim;
     let (i, j) = pos;
     let i = i as i32;
@@ -53,8 +60,18 @@ fn count(pos: (usize, usize), board: &Vec<Vec<i32>>, dim: (usize, usize)) -> usi
 #[test]
 fn t1() {
     let tcases = [(
-        vec![vec![0, 1, 0], vec![0, 0, 1], vec![1, 1, 1], vec![0, 0, 0]],
-        vec![vec![0, 0, 0], vec![1, 0, 1], vec![0, 1, 1], vec![0, 1, 0]],
+        vec![
+            vec![0, 1, 0],
+            vec![0, 0, 1],
+            vec![1, 1, 1],
+            vec![0, 0, 0],
+        ],
+        vec![
+            vec![0, 0, 0],
+            vec![1, 0, 1],
+            vec![0, 1, 1],
+            vec![0, 1, 0],
+        ],
     )];
     for (mut before, after) in tcases {
         game_of_life(&mut before);

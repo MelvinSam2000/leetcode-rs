@@ -16,7 +16,9 @@ pub fn flights(
     let mut best_routes = (0, 0);
     // O(n*m)
     for &(fr_id, fr_dist) in forward_routes.iter().rev() {
-        'inner: for &(rr_id, rr_dist) in return_routes.iter().rev() {
+        'inner: for &(rr_id, rr_dist) in
+            return_routes.iter().rev()
+        {
             let total = fr_dist + rr_dist;
             if total <= max_dist && total > curmax {
                 curmax = total;
@@ -44,7 +46,20 @@ fn t1() {
             (3, 5),
         ),
     ];
-    for (forward_routes, return_routes, max_dist, expected) in tcases {
-        assert_eq!(flights(forward_routes, return_routes, max_dist), expected);
+    for (
+        forward_routes,
+        return_routes,
+        max_dist,
+        expected,
+    ) in tcases
+    {
+        assert_eq!(
+            flights(
+                forward_routes,
+                return_routes,
+                max_dist
+            ),
+            expected
+        );
     }
 }

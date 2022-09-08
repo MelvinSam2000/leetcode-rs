@@ -3,7 +3,9 @@
     Time: O(n)
     Space: O(1)
 */
-pub fn sort_array_by_parity(mut nums: Vec<i32>) -> Vec<i32> {
+pub fn sort_array_by_parity(
+    mut nums: Vec<i32>,
+) -> Vec<i32> {
     let n = nums.len();
     let mut l = 0;
     let mut r = n - 1;

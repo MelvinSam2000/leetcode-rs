@@ -4,7 +4,10 @@
     Space: O(n)
     Note: with heap can be "optimized" to O(nlogk)
 */
-pub fn k_closest(points: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
+pub fn k_closest(
+    points: Vec<Vec<i32>>,
+    k: i32,
+) -> Vec<Vec<i32>> {
     let mut points = points
         .into_iter()
         .map(|p| PointDist::new(p[0], p[1]))
@@ -41,7 +44,10 @@ impl Ord for PointDist {
 }
 
 impl PartialOrd for PointDist {
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+    fn partial_cmp(
+        &self,
+        other: &Self,
+    ) -> Option<std::cmp::Ordering> {
         self.dist.partial_cmp(&other.dist)
     }
 }

@@ -33,9 +33,14 @@ pub fn min_cost_climbing_stairs_v2(cost: Vec<i32>) -> i32 {
 
 #[test]
 fn t1() {
-    assert_eq!(min_cost_climbing_stairs(vec![10, 15, 20]), 15);
     assert_eq!(
-        min_cost_climbing_stairs(vec![1, 100, 1, 1, 1, 100, 1, 1, 100, 1]),
+        min_cost_climbing_stairs(vec![10, 15, 20]),
+        15
+    );
+    assert_eq!(
+        min_cost_climbing_stairs(vec![
+            1, 100, 1, 1, 1, 100, 1, 1, 100, 1
+        ]),
         6
     );
 }

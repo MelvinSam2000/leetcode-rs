@@ -4,7 +4,10 @@
     Space: O(n)
     Note: Similar to Unbounded knapsack, coin change I
 */
-pub fn combination_sum4(nums: Vec<i32>, target: i32) -> i32 {
+pub fn combination_sum4(
+    nums: Vec<i32>,
+    target: i32,
+) -> i32 {
     let n = target as usize;
     let mut dp = vec![0; n + 1];
     dp[0] = 1;

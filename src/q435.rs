@@ -3,7 +3,9 @@
     Time: O(nlogn)
     Space: O(1)
 */
-pub fn erase_overlap_intervals(mut intervals: Vec<Vec<i32>>) -> i32 {
+pub fn erase_overlap_intervals(
+    mut intervals: Vec<Vec<i32>>,
+) -> i32 {
     intervals.sort();
     let mut end = intervals[0][1];
     let mut count = 0;

@@ -27,18 +27,20 @@ pub fn merge_two_lists(
                 pout.next = p2;
                 break;
             }
-            (Some(x1), Some(x2)) => match x1.val.cmp(&x2.val) {
-                Ordering::Less | Ordering::Equal => {
-                    pout.next = p1.take();
-                    pout = pout.next.as_mut().unwrap();
-                    p1 = pout.next.take();
+            (Some(x1), Some(x2)) => {
+                match x1.val.cmp(&x2.val) {
+                    Ordering::Less | Ordering::Equal => {
+                        pout.next = p1.take();
+                        pout = pout.next.as_mut().unwrap();
+                        p1 = pout.next.take();
+                    }
+                    Ordering::Greater => {
+                        pout.next = p2.take();
+                        pout = pout.next.as_mut().unwrap();
+                        p2 = pout.next.take();
+                    }
                 }
-                Ordering::Greater => {
-                    pout.next = p2.take();
-                    pout = pout.next.as_mut().unwrap();
-                    p2 = pout.next.take();
-                }
-            },
+            }
         }
     }
     out.next

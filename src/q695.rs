@@ -13,7 +13,14 @@ pub fn max_area_of_island(grid: Vec<Vec<i32>>) -> i32 {
         for j in 0..n {
             if grid[i][j] == 1 && !visited[i][j] {
                 let mut count = 0;
-                helper(&grid, &mut visited, (i, j), &mut count, m, n);
+                helper(
+                    &grid,
+                    &mut visited,
+                    (i, j),
+                    &mut count,
+                    m,
+                    n,
+                );
                 max_count = max(max_count, count);
             }
         }
@@ -35,15 +42,43 @@ fn helper(
     visited[pos.0][pos.1] = true;
     *count += 1;
     if pos.0 > 0 {
-        helper(grid, visited, (pos.0 - 1, pos.1), count, m, n);
+        helper(
+            grid,
+            visited,
+            (pos.0 - 1, pos.1),
+            count,
+            m,
+            n,
+        );
     }
     if pos.1 > 0 {
-        helper(grid, visited, (pos.0, pos.1 - 1), count, m, n);
+        helper(
+            grid,
+            visited,
+            (pos.0, pos.1 - 1),
+            count,
+            m,
+            n,
+        );
     }
     if pos.0 < m - 1 {
-        helper(grid, visited, (pos.0 + 1, pos.1), count, m, n);
+        helper(
+            grid,
+            visited,
+            (pos.0 + 1, pos.1),
+            count,
+            m,
+            n,
+        );
     }
     if pos.1 < n - 1 {
-        helper(grid, visited, (pos.0, pos.1 + 1), count, m, n);
+        helper(
+            grid,
+            visited,
+            (pos.0, pos.1 + 1),
+            count,
+            m,
+            n,
+        );
     }
 }

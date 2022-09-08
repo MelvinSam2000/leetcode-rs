@@ -26,7 +26,9 @@ impl MyHashSet {
     pub fn remove(&mut self, key: i32) {
         let hashed_key = key as usize % N;
         let mut i = None;
-        for (j, &k) in self.set[hashed_key].iter().enumerate() {
+        for (j, &k) in
+            self.set[hashed_key].iter().enumerate()
+        {
             if k == key {
                 i = Some(j);
             }

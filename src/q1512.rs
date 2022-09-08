@@ -8,7 +8,9 @@ pub fn num_identical_pairs(nums: Vec<i32>) -> i32 {
 
     nums.into_iter()
         .fold(HashMap::new(), |mut freq, num| {
-            freq.entry(num).and_modify(|c| *c += 1).or_insert(1);
+            freq.entry(num)
+                .and_modify(|c| *c += 1)
+                .or_insert(1);
             freq
         })
         .values()

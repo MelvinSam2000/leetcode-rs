@@ -25,12 +25,18 @@ fn rabin_karp(word: &str, pat: &str) -> Option<usize> {
         return None;
     }
 
-    let pat_hash = pat.iter().enumerate().fold(0, |prev, (i, ch)| {
-        prev + (ch - b'a') as usize * ALPHABET_SIZE.pow(i as u32)
-    });
-    let mut word_hash = word[..n].iter().enumerate().fold(0, |prev, (i, ch)| {
-        prev + (ch - b'a') as usize * ALPHABET_SIZE.pow(i as u32)
-    });
+    let pat_hash =
+        pat.iter().enumerate().fold(0, |prev, (i, ch)| {
+            prev + (ch - b'a') as usize
+                * ALPHABET_SIZE.pow(i as u32)
+        });
+    let mut word_hash = word[..n].iter().enumerate().fold(
+        0,
+        |prev, (i, ch)| {
+            prev + (ch - b'a') as usize
+                * ALPHABET_SIZE.pow(i as u32)
+        },
+    );
 
     for i in 0..=m - n {
         if word_hash == pat_hash {
@@ -41,15 +47,23 @@ fn rabin_karp(word: &str, pat: &str) -> Option<usize> {
         }
         word_hash -= (word[i] - b'a') as usize;
         word_hash /= ALPHABET_SIZE;
-        word_hash += (word[i + n] - b'a') as usize * ALPHABET_SIZE.pow(n as u32 - 1);
+        word_hash += (word[i + n] - b'a') as usize
+            * ALPHABET_SIZE.pow(n as u32 - 1);
     }
     None
 }
 
 #[test]
 fn t1() {
-    let tcases = [("hello", "ll", 2), ("abc", "c", 2), ("c", "c", 0)];
+    let tcases = [
+        ("hello", "ll", 2),
+        ("abc", "c", 2),
+        ("c", "c", 0),
+    ];
     for (haystack, needle, index) in tcases {
-        assert_eq!(str_str(haystack.to_owned(), needle.to_owned()), index);
+        assert_eq!(
+            str_str(haystack.to_owned(), needle.to_owned()),
+            index
+        );
     }
 }

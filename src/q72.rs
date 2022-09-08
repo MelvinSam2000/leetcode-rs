@@ -18,7 +18,9 @@ pub fn min_distance(word1: String, word2: String) -> i32 {
             dp[0][j] = if word1[i] == word2[j] {
                 dp[1][j + 1]
             } else {
-                1 + dp[1][j].min(dp[0][j + 1]).min(dp[1][j + 1])
+                1 + dp[1][j]
+                    .min(dp[0][j + 1])
+                    .min(dp[1][j + 1])
             };
         }
         dp[1][n - 1] += 2;
@@ -34,7 +36,10 @@ pub fn min_distance(word1: String, word2: String) -> i32 {
     Space: O(n*m)
     Note: Space can be optimized to O(m)
 */
-pub fn min_distance_v2(word1: String, word2: String) -> i32 {
+pub fn min_distance_v2(
+    word1: String,
+    word2: String,
+) -> i32 {
     let word1 = word1.as_bytes();
     let word2 = word2.as_bytes();
     let m = word1.len() + 1;
@@ -51,7 +56,9 @@ pub fn min_distance_v2(word1: String, word2: String) -> i32 {
             dp[i][j] = if word1[i] == word2[j] {
                 dp[i + 1][j + 1]
             } else {
-                1 + dp[i + 1][j].min(dp[i][j + 1]).min(dp[i + 1][j + 1])
+                1 + dp[i + 1][j]
+                    .min(dp[i][j + 1])
+                    .min(dp[i + 1][j + 1])
             };
         }
     }
@@ -59,7 +66,9 @@ pub fn min_distance_v2(word1: String, word2: String) -> i32 {
     dp[0][0] as i32
 }
 
-pub fn print_2d_array<T: std::fmt::Display>(arr: &[Vec<T>]) {
+pub fn print_2d_array<T: std::fmt::Display>(
+    arr: &[Vec<T>],
+) {
     let m = arr.len();
     let n = arr[0].len();
     for i in 0..m {
@@ -79,6 +88,12 @@ fn t1() {
         ("", "", 0),
     ];
     for (word1, word2, expected) in tcases {
-        assert_eq!(min_distance(word1.to_owned(), word2.to_owned()), expected);
+        assert_eq!(
+            min_distance(
+                word1.to_owned(),
+                word2.to_owned()
+            ),
+            expected
+        );
     }
 }

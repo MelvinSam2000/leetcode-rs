@@ -5,7 +5,9 @@ use crate::others::linkedlist::ListNode;
     Time: O(n*k*logk)
     Space: O(k)
 */
-pub fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
+pub fn merge_k_lists(
+    lists: Vec<Option<Box<ListNode>>>,
+) -> Option<Box<ListNode>> {
     use std::cmp::Reverse;
     use std::collections::BinaryHeap;
 

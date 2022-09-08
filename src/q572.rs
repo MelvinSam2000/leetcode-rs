@@ -21,27 +21,43 @@ pub fn is_subtree(
     }
 }
 
-fn dfs(s: Option<Rc<RefCell<TreeNode>>>, t: Rc<RefCell<TreeNode>>, target: i32) -> bool {
+fn dfs(
+    s: Option<Rc<RefCell<TreeNode>>>,
+    t: Rc<RefCell<TreeNode>>,
+    target: i32,
+) -> bool {
     match s {
         Some(s) => {
-            if s.borrow().val == target && are_equal(Some(s.clone()), Some(t.clone())) {
+            if s.borrow().val == target
+                && are_equal(
+                    Some(s.clone()),
+                    Some(t.clone()),
+                )
+            {
                 return true;
             }
             let mut s = s.borrow_mut();
-            dfs(s.left.take(), t.clone(), target) || dfs(s.right.take(), t, target)
+            dfs(s.left.take(), t.clone(), target)
+                || dfs(s.right.take(), t, target)
         }
         None => false,
     }
 }
 
-fn are_equal(s: Option<Rc<RefCell<TreeNode>>>, t: Option<Rc<RefCell<TreeNode>>>) -> bool {
+fn are_equal(
+    s: Option<Rc<RefCell<TreeNode>>>,
+    t: Option<Rc<RefCell<TreeNode>>>,
+) -> bool {
     match (s, t) {
         (Some(s), Some(t)) => {
             let s = s.borrow();
             let t = t.borrow();
             s.val == t.val
                 && are_equal(s.left.clone(), t.left.clone())
-                && are_equal(s.right.clone(), t.right.clone())
+                && are_equal(
+                    s.right.clone(),
+                    t.right.clone(),
+                )
         }
         (None, None) => true,
         _ => false,

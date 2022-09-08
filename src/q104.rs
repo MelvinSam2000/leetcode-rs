@@ -9,7 +9,9 @@ use crate::others::bst::TreeNode;
     Space: O(1) (O(h) counting recursion stack)
 */
 
-pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
+pub fn max_depth(
+    root: Option<Rc<RefCell<TreeNode>>>,
+) -> i32 {
     use std::cmp::max;
 
     match root {

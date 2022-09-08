@@ -4,7 +4,9 @@
     Space: O(1)
     Note: MAX SUM CIRC = TOTAL SUM - MIN SUM KADANE
 */
-pub fn max_subarray_sum_circular(mut nums: Vec<i32>) -> i32 {
+pub fn max_subarray_sum_circular(
+    mut nums: Vec<i32>,
+) -> i32 {
     let x = kadane(&nums);
     let mut s = 0;
     for elem in nums.iter_mut() {
@@ -35,6 +37,9 @@ fn kadane(nums: &[i32]) -> i32 {
 fn t1() {
     let tcases = [(vec![1, -2, 3, -2], 3)];
     for (nums, expected) in tcases {
-        assert_eq!(max_subarray_sum_circular(nums), expected);
+        assert_eq!(
+            max_subarray_sum_circular(nums),
+            expected
+        );
     }
 }

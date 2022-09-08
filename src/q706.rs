@@ -43,7 +43,9 @@ impl MyHashMap {
     pub fn remove(&mut self, key: i32) {
         let hashed_key = key as usize % N;
         let mut j = None;
-        for (i, &(k, _)) in self.map[hashed_key].iter().enumerate() {
+        for (i, &(k, _)) in
+            self.map[hashed_key].iter().enumerate()
+        {
             if k == key {
                 j = Some(i);
             }

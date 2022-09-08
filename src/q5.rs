@@ -31,6 +31,9 @@ pub fn longest_palindrome(s: String) -> String {
 fn t1() {
     let tcases = [("babad", "bab"), ("cbbd", "bb")];
     for (param, out) in tcases {
-        assert_eq!(longest_palindrome(param.to_owned()), out.to_owned());
+        assert_eq!(
+            longest_palindrome(param.to_owned()),
+            out.to_owned()
+        );
     }
 }

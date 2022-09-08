@@ -19,8 +19,12 @@ pub fn is_match(s: String, p: String) -> bool {
         for j in (0..n - 1).rev() {
             dp[0][j] = if p[j + 1] == b'*' {
                 (j < n - 2 && dp[0][j + 2])
-                    || (i < m - 1 && (s[i] == p[j] || p[j] == b'.') && dp[1][j])
-            } else if i < m - 1 && (s[i] == p[j] || p[j] == b'.') {
+                    || (i < m - 1
+                        && (s[i] == p[j] || p[j] == b'.')
+                        && dp[1][j])
+            } else if i < m - 1
+                && (s[i] == p[j] || p[j] == b'.')
+            {
                 dp[1][j + 1]
             } else {
                 false
@@ -56,8 +60,12 @@ pub fn is_match_v2(s: String, p: String) -> bool {
         for j in (0..n - 1).rev() {
             dp[i][j] = if p[j + 1] == b'*' {
                 (j < n - 2 && dp[i][j + 2])
-                    || (i < m - 1 && (s[i] == p[j] || p[j] == b'.') && dp[i + 1][j])
-            } else if i < m - 1 && (s[i] == p[j] || p[j] == b'.') {
+                    || (i < m - 1
+                        && (s[i] == p[j] || p[j] == b'.')
+                        && dp[i + 1][j])
+            } else if i < m - 1
+                && (s[i] == p[j] || p[j] == b'.')
+            {
                 dp[i + 1][j + 1]
             } else {
                 false
@@ -76,6 +84,9 @@ fn t1() {
     ];
 
     for (s, p, res) in tcases {
-        assert_eq!(is_match(s.to_owned(), p.to_owned()), res);
+        assert_eq!(
+            is_match(s.to_owned(), p.to_owned()),
+            res
+        );
     }
 }

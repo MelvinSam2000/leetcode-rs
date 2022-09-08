@@ -37,10 +37,14 @@ impl Trie {
 
     pub fn insert(&mut self, word: String) {
         let mut tmp = &mut self.head;
-        for &ch in word.as_bytes().iter().chain(Some(Self::END_CHAR).iter()) {
-            tmp.next
-                .entry(ch)
-                .or_insert_with(|| Box::new(TrieNode::new(ch)));
+        for &ch in word
+            .as_bytes()
+            .iter()
+            .chain(Some(Self::END_CHAR).iter())
+        {
+            tmp.next.entry(ch).or_insert_with(|| {
+                Box::new(TrieNode::new(ch))
+            });
             tmp = tmp.next.get_mut(&ch).unwrap();
         }
     }

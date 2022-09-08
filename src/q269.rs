@@ -10,7 +10,8 @@ use std::collections::HashSet;
 */
 pub fn alien_dictionary(words: Vec<String>) -> String {
     // step 1: Create edge list of each character (O(n))
-    let mut graph: HashMap<char, HashSet<char>> = HashMap::new();
+    let mut graph: HashMap<char, HashSet<char>> =
+        HashMap::new();
     words.iter().for_each(|word| {
         word.chars().for_each(|ch| {
             graph.entry(ch).or_default();
@@ -30,7 +31,9 @@ pub fn alien_dictionary(words: Vec<String>) -> String {
                         .and_modify(|set| {
                             set.insert(ch2);
                         })
-                        .or_insert_with(|| HashSet::from_iter([ch2]));
+                        .or_insert_with(|| {
+                            HashSet::from_iter([ch2])
+                        });
                     return;
                 }
             }
@@ -42,7 +45,8 @@ pub fn alien_dictionary(words: Vec<String>) -> String {
         return "".to_owned();
     }
     // Step 2: Topological sort (Kahns algorithm)
-    let mut indeg: HashMap<char, usize> = HashMap::from_iter(graph.keys().map(|&k| (k, 0)));
+    let mut indeg: HashMap<char, usize> =
+        HashMap::from_iter(graph.keys().map(|&k| (k, 0)));
     for &u in graph.values().flatten() {
         indeg.entry(u).and_modify(|c| *c += 1).or_insert(1);
     }
@@ -57,7 +61,8 @@ pub fn alien_dictionary(words: Vec<String>) -> String {
     while let Some(Reverse(v)) = q.pop() {
         out.push(v);
         for &u in graph.get(&v).into_iter().flatten() {
-            let deg = indeg.get(&u).map(|&val| val - 1).unwrap();
+            let deg =
+                indeg.get(&u).map(|&val| val - 1).unwrap();
             indeg.insert(u, deg);
             if deg == 0 {
                 q.push(Reverse(u));
@@ -82,11 +87,17 @@ fn t1() {
         (vec!["ab", "bb", "ba"], ""),
         (vec!["abc", "ab"], ""),
     ];
-    for (i, (words, expected)) in tcases.into_iter().enumerate() {
+    for (i, (words, expected)) in
+        tcases.into_iter().enumerate()
+    {
         let words = words
             .into_iter()
             .map(|word| word.to_owned())
             .collect::<Vec<_>>();
-        assert_eq!(&alien_dictionary(words), expected, "Failed case {i}");
+        assert_eq!(
+            &alien_dictionary(words),
+            expected,
+            "Failed case {i}"
+        );
     }
 }

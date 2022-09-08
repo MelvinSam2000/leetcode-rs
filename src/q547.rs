@@ -35,7 +35,10 @@ fn find(mut index: usize, parent: &[usize]) -> usize {
 
 #[test]
 fn t1() {
-    let tcases = [(vec![vec![1, 1, 0], vec![1, 1, 0], vec![0, 0, 1]], 2)];
+    let tcases = [(
+        vec![vec![1, 1, 0], vec![1, 1, 0], vec![0, 0, 1]],
+        2,
+    )];
 
     for (grid, count) in tcases {
         assert_eq!(find_circle_num(grid), count);

@@ -19,7 +19,9 @@ pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
         while l < r {
             match (nums[i] + nums[l] + nums[r]).cmp(&0) {
                 Ordering::Equal => {
-                    triplets.push(vec![nums[i], nums[l], nums[r]]);
+                    triplets.push(vec![
+                        nums[i], nums[l], nums[r],
+                    ]);
                     l += 1;
                     while l < r && nums[l - 1] == nums[l] {
                         l += 1;

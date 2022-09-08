@@ -13,7 +13,8 @@ fn solve(board: &mut Vec<Vec<char>>) -> bool {
         for j in 0..9 {
             if board[i][j] == '.' {
                 for k in 1..=9 {
-                    let k = char::from_digit(k, 10).unwrap();
+                    let k =
+                        char::from_digit(k, 10).unwrap();
                     if is_safe_to_assign(board, i, j, k) {
                         board[i][j] = k;
                         if solve(board) {
@@ -29,7 +30,12 @@ fn solve(board: &mut Vec<Vec<char>>) -> bool {
     true
 }
 
-fn is_safe_to_assign(board: &mut [Vec<char>], i: usize, j: usize, k: char) -> bool {
+fn is_safe_to_assign(
+    board: &mut [Vec<char>],
+    i: usize,
+    j: usize,
+    k: char,
+) -> bool {
     for x in 0..9 {
         if board[x][j] == k {
             return false;
@@ -41,7 +47,9 @@ fn is_safe_to_assign(board: &mut [Vec<char>], i: usize, j: usize, k: char) -> bo
         let box_j = j / 3;
         let little_i = x / 3;
         let little_j = x % 3;
-        if board[3 * box_i + little_i][3 * box_j + little_j] == k {
+        if board[3 * box_i + little_i][3 * box_j + little_j]
+            == k
+        {
             return false;
         }
     }

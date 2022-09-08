@@ -3,7 +3,10 @@
     Time: O(n)
     Space: O(n)
 */
-pub fn contains_nearby_duplicate(nums: Vec<i32>, k: i32) -> bool {
+pub fn contains_nearby_duplicate(
+    nums: Vec<i32>,
+    k: i32,
+) -> bool {
     use std::collections::HashMap;
     let mut visited = HashMap::new();
     for i in 0..nums.len() {

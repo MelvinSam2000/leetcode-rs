@@ -15,7 +15,9 @@ impl ListNode {
 
 impl TryFrom<Vec<i32>> for ListNode {
     type Error = ();
-    fn try_from(elems: Vec<i32>) -> Result<Self, Self::Error> {
+    fn try_from(
+        elems: Vec<i32>,
+    ) -> Result<Self, Self::Error> {
         if elems.is_empty() {
             return Err(());
         }
@@ -45,7 +47,10 @@ impl From<ListNode> for Vec<i32> {
 }
 
 impl PartialOrd for ListNode {
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+    fn partial_cmp(
+        &self,
+        other: &Self,
+    ) -> Option<std::cmp::Ordering> {
         Some(self.val.cmp(&other.val))
     }
 }

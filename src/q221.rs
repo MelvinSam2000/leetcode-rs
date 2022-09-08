@@ -13,7 +13,9 @@ pub fn maximal_square(matrix: Vec<Vec<char>>) -> i32 {
         for j in (0..n).rev() {
             dp[0][j] = if matrix[i][j] == '1' {
                 1 + if i < m - 1 && j < n - 1 {
-                    dp[1][j].min(dp[0][j + 1]).min(dp[1][j + 1])
+                    dp[1][j]
+                        .min(dp[0][j + 1])
+                        .min(dp[1][j + 1])
                 } else {
                     0
                 }
@@ -43,7 +45,9 @@ pub fn maximal_square_v2(matrix: Vec<Vec<char>>) -> i32 {
         for j in (0..n).rev() {
             dp[i][j] = if matrix[i][j] == '1' {
                 1 + if i < m - 1 && j < n - 1 {
-                    dp[i + 1][j].min(dp[i][j + 1]).min(dp[i + 1][j + 1])
+                    dp[i + 1][j]
+                        .min(dp[i][j + 1])
+                        .min(dp[i + 1][j + 1])
                 } else {
                     0
                 }

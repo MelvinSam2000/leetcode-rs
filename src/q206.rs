@@ -5,11 +5,16 @@ use crate::others::linkedlist::ListNode;
     Time: O(n)
     Space: O(1), O(n) with recursion stack
 */
-pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+pub fn reverse_list(
+    head: Option<Box<ListNode>>,
+) -> Option<Box<ListNode>> {
     helper(head, None)
 }
 
-fn helper(head: Option<Box<ListNode>>, reversed: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+fn helper(
+    head: Option<Box<ListNode>>,
+    reversed: Option<Box<ListNode>>,
+) -> Option<Box<ListNode>> {
     if let Some(mut node) = head {
         let new_head = node.next.take();
         node.next = reversed;
@@ -21,10 +26,12 @@ fn helper(head: Option<Box<ListNode>>, reversed: Option<Box<ListNode>>) -> Optio
 
 #[test]
 fn t1() {
-    let tcases = [(vec![0, 1, 2, 3, 4], vec![4, 3, 2, 1, 0])];
+    let tcases =
+        [(vec![0, 1, 2, 3, 4], vec![4, 3, 2, 1, 0])];
     for (param, out) in tcases {
         let param = param.try_into().ok().map(Box::new);
-        let res: Vec<i32> = (*reverse_list(param).unwrap()).into();
+        let res: Vec<i32> =
+            (*reverse_list(param).unwrap()).into();
         assert_eq!(res, out);
     }
 }

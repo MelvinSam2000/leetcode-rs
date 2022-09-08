@@ -8,7 +8,9 @@ use crate::others::bst::TreeNode;
     Time: O(n)
     Space: O(1) (O(n) counting recursion stack)
 */
-pub fn invert_tree(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
+pub fn invert_tree(
+    root: Option<Rc<RefCell<TreeNode>>>,
+) -> Option<Rc<RefCell<TreeNode>>> {
     root.map(|node| {
         let node_ref = node.clone();
         let mut node_ref = node_ref.borrow_mut();

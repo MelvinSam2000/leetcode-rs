@@ -6,7 +6,11 @@
     - Its is a Single Source Shortest Path problem
     - Uses Dijkstra's algorithm
 */
-pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
+pub fn network_delay_time(
+    times: Vec<Vec<i32>>,
+    n: i32,
+    k: i32,
+) -> i32 {
     use std::collections::BinaryHeap;
 
     // build graph for constant adj access O(E)
@@ -14,7 +18,11 @@ pub fn network_delay_time(times: Vec<Vec<i32>>, n: i32, k: i32) -> i32 {
     let k = k as usize;
     let mut graph = vec![vec![]; n];
     for edge in times {
-        let (src, dst, w) = (edge[0] as usize, edge[1] as usize, edge[2] as usize);
+        let (src, dst, w) = (
+            edge[0] as usize,
+            edge[1] as usize,
+            edge[2] as usize,
+        );
         graph[src].push((dst, w));
     }
 
@@ -76,7 +84,10 @@ impl Ord for DistVertex {
 }
 
 impl PartialOrd for DistVertex {
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+    fn partial_cmp(
+        &self,
+        other: &Self,
+    ) -> Option<std::cmp::Ordering> {
         Some(self.dist.cmp(&other.dist))
     }
 }
@@ -88,7 +99,10 @@ fn t1() {
         (vec![[1, 2, 1], [2, 3, 2], [1, 3, 4]], 3, 1, 3),
     ];
     for (graph, v, src, cost) in tcases {
-        let graph = graph.into_iter().map(|arr| arr.to_vec()).collect();
+        let graph = graph
+            .into_iter()
+            .map(|arr| arr.to_vec())
+            .collect();
         assert_eq!(network_delay_time(graph, v, src), cost);
     }
 }

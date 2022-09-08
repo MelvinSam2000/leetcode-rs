@@ -4,7 +4,13 @@
     Space: O(V)
     Note: Slight variation of Bellman Ford algorithm.
 */
-pub fn find_cheapest_price(n: i32, flights: Vec<Vec<i32>>, src: i32, dst: i32, k: i32) -> i32 {
+pub fn find_cheapest_price(
+    n: i32,
+    flights: Vec<Vec<i32>>,
+    src: i32,
+    dst: i32,
+    k: i32,
+) -> i32 {
     use std::i32::MAX;
     let n = n as usize;
     let src = src as usize;
@@ -16,8 +22,14 @@ pub fn find_cheapest_price(n: i32, flights: Vec<Vec<i32>>, src: i32, dst: i32, k
 
     for _ in 0..=k {
         for edge in flights.iter() {
-            let (u, v, w) = (edge[0] as usize, edge[1] as usize, edge[2]);
-            dp[0][v] = dp[0][v].min(dp[1][v]).min(match dp[1][u] {
+            let (u, v, w) = (
+                edge[0] as usize,
+                edge[1] as usize,
+                edge[2],
+            );
+            dp[0][v] = dp[0][v].min(dp[1][v]).min(match dp
+                [1][u]
+            {
                 MAX => MAX,
                 _ => dp[1][u] + w,
             });

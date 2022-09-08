@@ -1,4 +1,6 @@
-pub fn minimal_heaviest_set_a(mut arr: Vec<i32>) -> Vec<i32> {
+pub fn minimal_heaviest_set_a(
+    mut arr: Vec<i32>,
+) -> Vec<i32> {
     arr.sort();
     let s: i32 = arr.iter().sum();
     let mut a_sum = 0;

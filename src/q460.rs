@@ -69,7 +69,10 @@ impl LFUCache {
     }
 
     fn reorder(&mut self, mut i: usize) {
-        while i != 0 && self.entries[i].freq >= self.entries[i - 1].freq {
+        while i != 0
+            && self.entries[i].freq
+                >= self.entries[i - 1].freq
+        {
             self.map
                 .entry(self.entries[i].key)
                 .and_modify(|index| *index -= 1);

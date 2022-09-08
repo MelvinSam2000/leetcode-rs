@@ -6,7 +6,10 @@ use std::collections::VecDeque;
     Space: O(V + E)
     Note: Top Sort with Kahn's Algorithm
 */
-pub fn find_order(num_courses: i32, prerequisites: Vec<Vec<i32>>) -> Vec<i32> {
+pub fn find_order(
+    num_courses: i32,
+    prerequisites: Vec<Vec<i32>>,
+) -> Vec<i32> {
     let n = num_courses as usize;
 
     let mut indeg = vec![0; n];

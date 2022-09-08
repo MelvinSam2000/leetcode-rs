@@ -36,7 +36,8 @@ pub fn reorder_list(head: &mut Option<Box<ListNode>>) {
     let mut tmp = head;
     for i in 1..n {
         if let Some(node) = tmp {
-            node.next = Some(Box::new(ListNode::new(out[i])));
+            node.next =
+                Some(Box::new(ListNode::new(out[i])));
             tmp = &mut node.next;
         }
     }

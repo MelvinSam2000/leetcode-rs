@@ -3,7 +3,10 @@
     Time: O(n*logn)
     Space: O(n)
 */
-pub fn self_dividing_numbers(left: i32, right: i32) -> Vec<i32> {
+pub fn self_dividing_numbers(
+    left: i32,
+    right: i32,
+) -> Vec<i32> {
     (left..=right)
         .filter(|&num| {
             let mut x = num;

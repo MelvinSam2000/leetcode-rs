@@ -4,7 +4,9 @@
     Space: O(n^2)
     Note: Implemented using Kruskal's algorithm
 */
-pub fn min_cost_connect_points(points: Vec<Vec<i32>>) -> i32 {
+pub fn min_cost_connect_points(
+    points: Vec<Vec<i32>>,
+) -> i32 {
     use std::collections::BinaryHeap;
     let n = points.len();
     let mut distances = BinaryHeap::new();
@@ -12,7 +14,8 @@ pub fn min_cost_connect_points(points: Vec<Vec<i32>>) -> i32 {
         for j in i + 1..n {
             let p1 = (points[i][0], points[i][1]);
             let p2 = (points[j][0], points[j][1]);
-            let dist = (p1.0 - p2.0).abs() + (p1.1 - p2.1).abs();
+            let dist =
+                (p1.0 - p2.0).abs() + (p1.1 - p2.1).abs();
             distances.push(Pair { i, j, dist });
         }
     }
@@ -51,7 +54,10 @@ impl Ord for Pair {
 }
 
 impl PartialOrd for Pair {
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
+    fn partial_cmp(
+        &self,
+        other: &Self,
+    ) -> Option<std::cmp::Ordering> {
         Some(self.cmp(other))
     }
 }
@@ -63,7 +69,12 @@ fn find(mut index: usize, parent: &[usize]) -> usize {
     index
 }
 
-fn union(pi: usize, pj: usize, parent: &mut [usize], rank: &mut [usize]) {
+fn union(
+    pi: usize,
+    pj: usize,
+    parent: &mut [usize],
+    rank: &mut [usize],
+) {
     if rank[pi] > rank[pj] {
         parent[pj] = pi;
         rank[pi] += rank[pj];
@@ -84,6 +95,9 @@ fn t1() {
             .into_iter()
             .map(|pair| vec![pair[0], pair[1]])
             .collect::<Vec<Vec<i32>>>();
-        assert_eq!(min_cost_connect_points(param), expected);
+        assert_eq!(
+            min_cost_connect_points(param),
+            expected
+        );
     }
 }

@@ -37,11 +37,15 @@ fn solve(
     }
 }
 
-fn check_valid(board: &Vec<Vec<bool>>, pos: (usize, usize)) -> bool {
+fn check_valid(
+    board: &Vec<Vec<bool>>,
+    pos: (usize, usize),
+) -> bool {
     let n = board.len() as isize;
     let (row, col) = pos;
     // diag north west
-    let (mut i, mut j) = (row as isize - 1, col as isize - 1);
+    let (mut i, mut j) =
+        (row as isize - 1, col as isize - 1);
     while i >= 0 && j >= 0 {
         if board[i as usize][j as usize] {
             return false;
@@ -50,7 +54,8 @@ fn check_valid(board: &Vec<Vec<bool>>, pos: (usize, usize)) -> bool {
         j -= 1;
     }
     // diag north east
-    let (mut i, mut j) = (row as isize - 1, col as isize + 1);
+    let (mut i, mut j) =
+        (row as isize - 1, col as isize + 1);
     while i >= 0 && j < n {
         if board[i as usize][j as usize] {
             return false;
@@ -59,7 +64,8 @@ fn check_valid(board: &Vec<Vec<bool>>, pos: (usize, usize)) -> bool {
         j += 1;
     }
     // diag south west
-    let (mut i, mut j) = (row as isize + 1, col as isize - 1);
+    let (mut i, mut j) =
+        (row as isize + 1, col as isize - 1);
     while i < n && j >= 0 {
         if board[i as usize][j as usize] {
             return false;
@@ -68,7 +74,8 @@ fn check_valid(board: &Vec<Vec<bool>>, pos: (usize, usize)) -> bool {
         j -= 1;
     }
     // diag south east
-    let (mut i, mut j) = (row as isize + 1, col as isize + 1);
+    let (mut i, mut j) =
+        (row as isize + 1, col as isize + 1);
     while i < n && j < n {
         if board[i as usize][j as usize] {
             return false;

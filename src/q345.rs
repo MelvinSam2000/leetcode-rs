@@ -8,8 +8,10 @@ pub fn reverse_vowels(s: String) -> String {
 
     let n = s.len();
     let mut s = s.as_bytes().to_vec();
-    let vowels: HashSet<u8> =
-        HashSet::from_iter([b'a', b'e', b'i', b'o', b'u', b'A', b'E', b'I', b'O', b'U']);
+    let vowels: HashSet<u8> = HashSet::from_iter([
+        b'a', b'e', b'i', b'o', b'u', b'A', b'E', b'I',
+        b'O', b'U',
+    ]);
 
     let mut l = 0;
     let mut r = n - 1;

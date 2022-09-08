@@ -54,12 +54,19 @@ impl WordDictionary {
             x => (x - b'a') as usize,
         };
         if node.next[val].is_none() {
-            node.next[val] = Some(Box::new(TrieNode::new(word[0])));
+            node.next[val] =
+                Some(Box::new(TrieNode::new(word[0])));
         }
-        Self::add_word_helper(node.next[val].as_mut().unwrap(), &word[1..])
+        Self::add_word_helper(
+            node.next[val].as_mut().unwrap(),
+            &word[1..],
+        )
     }
 
-    fn search_word_helper(node: &TrieNode, word: &[u8]) -> bool {
+    fn search_word_helper(
+        node: &TrieNode,
+        word: &[u8],
+    ) -> bool {
         if word.is_empty() {
             return false;
         }
@@ -68,14 +75,21 @@ impl WordDictionary {
 
         if word[0] == Self::MATCH_CHAR {
             for child in children {
-                if Self::search_word_helper(child, &word[1..]) {
+                if Self::search_word_helper(
+                    child,
+                    &word[1..],
+                ) {
                     return true;
                 }
             }
         } else {
             for child in children {
                 if child.ch == word[0]
-                    && (child.ch == Self::END_CHAR || Self::search_word_helper(child, &word[1..]))
+                    && (child.ch == Self::END_CHAR
+                        || Self::search_word_helper(
+                            child,
+                            &word[1..],
+                        ))
                 {
                     return true;
                 }

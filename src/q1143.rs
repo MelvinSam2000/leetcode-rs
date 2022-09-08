@@ -3,7 +3,10 @@
     Time: O(m*n)
     Space: O(n)
 */
-pub fn longest_common_subsequence(s1: String, s2: String) -> i32 {
+pub fn longest_common_subsequence(
+    s1: String,
+    s2: String,
+) -> i32 {
     let s1 = s1.as_bytes();
     let s2 = s2.as_bytes();
     let m = s1.len();
@@ -28,7 +31,10 @@ pub fn longest_common_subsequence(s1: String, s2: String) -> i32 {
     Space: O(n*m)
     Note: Can be space optimized..
 */
-pub fn longest_common_subsequence_v2(s1: String, s2: String) -> i32 {
+pub fn longest_common_subsequence_v2(
+    s1: String,
+    s2: String,
+) -> i32 {
     let s1 = s1.as_bytes();
     let s2 = s2.as_bytes();
     let m = s1.len();
@@ -57,7 +63,10 @@ fn t1() {
     ];
     for (s1, s2, lcs) in tcases {
         assert_eq!(
-            longest_common_subsequence(s1.to_owned(), s2.to_owned()),
+            longest_common_subsequence(
+                s1.to_owned(),
+                s2.to_owned()
+            ),
             lcs
         );
     }

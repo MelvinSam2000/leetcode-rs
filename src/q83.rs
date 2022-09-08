@@ -5,7 +5,9 @@ use crate::others::linkedlist::ListNode;
     Time: O(n)
     Space: O(1)
 */
-pub fn delete_duplicates(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+pub fn delete_duplicates(
+    mut head: Option<Box<ListNode>>,
+) -> Option<Box<ListNode>> {
     let mut tmp = &mut head;
     while let Some(node1) = tmp {
         while let Some(node2) = &mut node1.next {

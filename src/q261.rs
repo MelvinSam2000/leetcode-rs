@@ -22,7 +22,12 @@ pub fn valid_tree(n: i32, edges: Vec<Vec<i32>>) -> bool {
     visited.iter().all(|&x| x)
 }
 
-fn dfs(v: usize, p: usize, graph: &Vec<Vec<usize>>, visited: &mut [bool]) -> bool {
+fn dfs(
+    v: usize,
+    p: usize,
+    graph: &Vec<Vec<usize>>,
+    visited: &mut [bool],
+) -> bool {
     if visited[v] {
         return false;
     }
@@ -37,10 +42,14 @@ fn dfs(v: usize, p: usize, graph: &Vec<Vec<usize>>, visited: &mut [bool]) -> boo
 
 #[test]
 fn t1() {
-    let tcases = [(5, vec![[0, 1], [0, 2], [0, 3], [1, 4]], true)];
+    let tcases =
+        [(5, vec![[0, 1], [0, 2], [0, 3], [1, 4]], true)];
 
     for (n, graph, ans) in tcases {
-        let graph = graph.into_iter().map(|v| v.to_vec()).collect::<Vec<_>>();
+        let graph = graph
+            .into_iter()
+            .map(|v| v.to_vec())
+            .collect::<Vec<_>>();
         assert_eq!(valid_tree(n, graph), ans);
     }
 }

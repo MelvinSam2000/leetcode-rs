@@ -29,7 +29,11 @@ impl Twitter {
     }
 
     // O(1)
-    pub fn post_tweet(&mut self, user_id: i32, tweet_id: i32) {
+    pub fn post_tweet(
+        &mut self,
+        user_id: i32,
+        tweet_id: i32,
+    ) {
         self.tweets.push((user_id.into(), tweet_id.into()));
     }
 
@@ -40,7 +44,9 @@ impl Twitter {
             let &(UserId(u_id), TweetId(t_id)) = tweet;
             if user_id == u_id {
                 feeds.push(t_id);
-            } else if let Some(set) = self.followers.get(&user_id.into()) {
+            } else if let Some(set) =
+                self.followers.get(&user_id.into())
+            {
                 if set.contains(&u_id.into()) {
                     feeds.push(t_id);
                 }
@@ -53,7 +59,11 @@ impl Twitter {
     }
 
     // O(1)
-    pub fn follow(&mut self, follower_id: i32, followee_id: i32) {
+    pub fn follow(
+        &mut self,
+        follower_id: i32,
+        followee_id: i32,
+    ) {
         let follower_id = follower_id.into();
         self.followers
             .entry(follower_id)
@@ -65,8 +75,14 @@ impl Twitter {
     }
 
     // O(1)
-    pub fn unfollow(&mut self, follower_id: i32, followee_id: i32) {
-        if let Some(set) = self.followers.get_mut(&follower_id.into()) {
+    pub fn unfollow(
+        &mut self,
+        follower_id: i32,
+        followee_id: i32,
+    ) {
+        if let Some(set) =
+            self.followers.get_mut(&follower_id.into())
+        {
             set.remove(&followee_id.into());
         }
     }

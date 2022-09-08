@@ -14,7 +14,8 @@ pub fn character_replacement(s: String, k: i32) -> i32 {
 
     for r in 0..n {
         count[(s[r] - b'A') as usize] += 1;
-        while (r - l + 1) - count.iter().max().unwrap() > k {
+        while (r - l + 1) - count.iter().max().unwrap() > k
+        {
             count[(s[l] - b'A') as usize] -= 1;
             l += 1;
         }

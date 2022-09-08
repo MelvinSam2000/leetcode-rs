@@ -9,7 +9,8 @@ pub fn min_set_size(arr: Vec<i32>) -> i32 {
 
     let mut freq = HashMap::new();
     for elem in arr {
-        let count = freq.get(&elem).map(|&x| x + 1).unwrap_or(1);
+        let count =
+            freq.get(&elem).map(|&x| x + 1).unwrap_or(1);
         freq.insert(elem, count);
     }
     let mut counts = freq.values().collect::<Vec<_>>();

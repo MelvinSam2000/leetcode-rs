@@ -9,7 +9,12 @@ pub fn subsets(nums: Vec<i32>) -> Vec<Vec<i32>> {
     res
 }
 
-fn helper(nums: &[i32], res: &mut Vec<Vec<i32>>, subset: &mut Vec<i32>, i: usize) {
+fn helper(
+    nums: &[i32],
+    res: &mut Vec<Vec<i32>>,
+    subset: &mut Vec<i32>,
+    i: usize,
+) {
     res.push(subset.clone());
     for j in i..nums.len() {
         subset.push(nums[j]);

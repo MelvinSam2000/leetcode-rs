@@ -10,10 +10,13 @@ pub fn delete_and_earn(nums: Vec<i32>) -> i32 {
     }
 
     let k = nums.iter().max().cloned().unwrap() as usize;
-    let freq = nums.into_iter().fold(vec![0; k + 1], |mut freq, num| {
-        freq[num as usize] += 1;
-        freq
-    });
+    let freq = nums.into_iter().fold(
+        vec![0; k + 1],
+        |mut freq, num| {
+            freq[num as usize] += 1;
+            freq
+        },
+    );
 
     let mut dp = [freq[1], freq[1], 0];
     for i in 2..=k {
@@ -36,7 +39,8 @@ pub fn delete_and_earn_v2(nums: Vec<i32>) -> i32 {
     if n == 1 {
         return nums[0];
     }
-    let k: usize = nums.iter().max().cloned().unwrap() as usize + 1;
+    let k: usize =
+        nums.iter().max().cloned().unwrap() as usize + 1;
     let mut count = vec![0; k];
     for i in 0..n {
         count[nums[i] as usize] += 1;
@@ -44,7 +48,10 @@ pub fn delete_and_earn_v2(nums: Vec<i32>) -> i32 {
     let mut dp = vec![0; k];
     dp[1] = count[1];
     for i in 2..k {
-        dp[i] = max(dp[i - 1], (i as i32) * count[i] + dp[i - 2]);
+        dp[i] = max(
+            dp[i - 1],
+            (i as i32) * count[i] + dp[i - 2],
+        );
     }
     dp[k - 1]
 }

@@ -18,7 +18,8 @@ pub fn can_partition(nums: Vec<i32>) -> bool {
     for i in 1..n {
         for j in 1..=s {
             let x = j as i32 - nums[i];
-            dp[0][j] = dp[1][j] || (x >= 0 && dp[1][x as usize]);
+            dp[0][j] =
+                dp[1][j] || (x >= 0 && dp[1][x as usize]);
             if dp[0][s / 2] {
                 return true;
             }
@@ -48,7 +49,8 @@ pub fn can_partition_v2(nums: Vec<i32>) -> bool {
     for i in 1..n {
         for j in 0..=s {
             let x = j as i32 - nums[i];
-            dp[i][j] = dp[i - 1][j] || (x >= 0 && dp[i - 1][x as usize]);
+            dp[i][j] = dp[i - 1][j]
+                || (x >= 0 && dp[i - 1][x as usize]);
             if dp[i][s / 2] {
                 return true;
             }

@@ -3,7 +3,9 @@
     Time: O(nlogn)
     Space: O(1)
 */
-pub fn can_attend_meetings(mut intervals: Vec<(i32, i32)>) -> bool {
+pub fn can_attend_meetings(
+    mut intervals: Vec<(i32, i32)>,
+) -> bool {
     intervals.sort();
     !intervals
         .windows(2)
@@ -18,6 +20,9 @@ fn t1() {
         (vec![(5, 8), (9, 15)], true),
     ];
     for (intervals, expected) in tcases {
-        assert_eq!(can_attend_meetings(intervals), expected);
+        assert_eq!(
+            can_attend_meetings(intervals),
+            expected
+        );
     }
 }

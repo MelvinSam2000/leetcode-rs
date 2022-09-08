@@ -12,7 +12,13 @@ pub fn num_islands(grid: Vec<Vec<char>>) -> i32 {
         for j in 0..n {
             if !visited[i][j] && grid[i][j] == '1' {
                 count += 1;
-                mark_island(&grid, &mut visited, (i, j), m, n);
+                mark_island(
+                    &grid,
+                    &mut visited,
+                    (i, j),
+                    m,
+                    n,
+                );
             }
         }
     }
@@ -31,15 +37,39 @@ fn mark_island(
     }
     visited[pos.0][pos.1] = true;
     if pos.0 != m - 1 && !visited[pos.0 + 1][pos.1] {
-        mark_island(grid, visited, (pos.0 + 1, pos.1), m, n);
+        mark_island(
+            grid,
+            visited,
+            (pos.0 + 1, pos.1),
+            m,
+            n,
+        );
     }
     if pos.1 != n - 1 && !visited[pos.0][pos.1 + 1] {
-        mark_island(grid, visited, (pos.0, pos.1 + 1), m, n);
+        mark_island(
+            grid,
+            visited,
+            (pos.0, pos.1 + 1),
+            m,
+            n,
+        );
     }
     if pos.0 != 0 && !visited[pos.0 - 1][pos.1] {
-        mark_island(grid, visited, (pos.0 - 1, pos.1), m, n);
+        mark_island(
+            grid,
+            visited,
+            (pos.0 - 1, pos.1),
+            m,
+            n,
+        );
     }
     if pos.1 != 0 && !visited[pos.0][pos.1 - 1] {
-        mark_island(grid, visited, (pos.0, pos.1 - 1), m, n);
+        mark_island(
+            grid,
+            visited,
+            (pos.0, pos.1 - 1),
+            m,
+            n,
+        );
     }
 }

@@ -9,7 +9,8 @@ pub fn valid_palindrome(s: String) -> bool {
     let mut r = s.len() - 1;
     while l < r {
         if s[l] != s[r] {
-            return palindrome(&s[l + 1..=r]) || palindrome(&s[l..r]);
+            return palindrome(&s[l + 1..=r])
+                || palindrome(&s[l..r]);
         }
         l += 1;
         r -= 1;

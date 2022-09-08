@@ -3,7 +3,9 @@
     Time: O(nlogn)
     Space: O(n)
 */
-pub fn merge(mut intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
+pub fn merge(
+    mut intervals: Vec<Vec<i32>>,
+) -> Vec<Vec<i32>> {
     intervals.sort();
     let mut out = vec![];
     let mut min_start = intervals[0][0];

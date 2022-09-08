@@ -4,7 +4,10 @@
     Time: O(n*m)
     Space: O(n)
 */
-pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
+pub fn word_break(
+    s: String,
+    word_dict: Vec<String>,
+) -> bool {
     let s = s.as_bytes();
     let n = s.len();
     let mut dp = vec![false; n + 1];
@@ -13,7 +16,10 @@ pub fn word_break(s: String, word_dict: Vec<String>) -> bool {
         for word in word_dict.iter() {
             let w = word.as_bytes();
             let mut j = 0;
-            while i + j < n && j < w.len() && s[i + j] == w[j] {
+            while i + j < n
+                && j < w.len()
+                && s[i + j] == w[j]
+            {
                 j += 1;
             }
             if j == w.len() && dp[i + j] {
