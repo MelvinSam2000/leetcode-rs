@@ -1,27 +1,65 @@
 /*
-    62 - Unique Paths
-    Time: O(n*m)
-    Space: O(min(n, m))
+    62 - Unique Paths (Compile time computation)
+    Time: O(1)
+    Space: O(1)
 */
 pub fn unique_paths(m: i32, n: i32) -> i32 {
-    use std::cmp::max;
-    use std::cmp::min;
-    use std::mem::swap;
+    const M: usize = 100;
+    const N: usize = 100;
+    static PATHS: [[i32; N]; M] = {
+        let mut paths = [[0; N]; M];
+        paths[0][0] = 1;
+        let mut i = 0;
+        while i < M {
+            let mut j = 0;
+            while j < N {
+                if i > 0 {
+                    let x = (paths[i][j] as i32)
+                        .wrapping_add(paths[i - 1][j]);
+                    paths[i][j] = if paths[i - 1][j] > x {
+                        std::i32::MAX
+                    } else {
+                        x
+                    };
+                }
+                if j > 0 {
+                    let x = (paths[i][j] as i32)
+                        .wrapping_add(paths[i][j - 1]);
+                    paths[i][j] = if paths[i][j - 1] > x {
+                        std::i32::MAX
+                    } else {
+                        x
+                    };
+                }
+                j += 1;
+            }
+            i += 1;
+        }
+        paths
+    };
 
-    let (n, m) = (min(n, m) as usize, max(n, m));
+    let (m, n) = (m as usize, n as usize);
+    PATHS[m - 1][n - 1]
+}
 
-    let mut dp1 = vec![0; n];
-    let mut dp2 = vec![0; n];
-    dp1[0] = 1;
-    dp2[0] = 1;
+/*
+    62 - Unique Paths
+    Time: O(n*m)
+    Space: O(n)
+*/
+pub fn unique_paths_v1(m: i32, n: i32) -> i32 {
+    let n = n as usize;
+    let mut dp = [vec![0; n], vec![0; n]];
+    dp[0][0] = 1;
+    dp[1][0] = 1;
 
     for _ in 0..m {
         for j in 1..n {
-            dp2[j] = dp1[j] + dp2[j - 1];
+            dp[0][j] = dp[1][j] + dp[0][j - 1];
         }
-        swap(&mut dp1, &mut dp2);
+        dp.swap(0, 1);
     }
-    dp1[n - 1]
+    dp[1][n - 1]
 }
 
 /*
