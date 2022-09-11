@@ -129,6 +129,7 @@ Chapter 8: Recursion and Dynamic Programming
 [ ] 29. Divide Two Integers
 
 8.6 Towers of Hanoi - Not Found
+[x] (Lintcode) 169 - Tower of Hanoi
 
 8.7 Permutation without Dups
 [x] 46. Permutations
