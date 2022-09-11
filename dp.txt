@@ -1,5 +1,7 @@
 # Dynamic Programming I (Leetcode DP)
 
+[x] All Done!
+
 [x] 509 - Fibonacci Number
 [x] 1137 - N-th Tribonacci Number
 
