@@ -26,7 +26,7 @@
 [x] 121 - Best time to buy/sell stock 
 [x] 3 - Longest Substring without repeating chars 
 [x] 424 - Longest repeating char replacement *
-[x] 567 - Permutation in String 
+[x] 567 - Permutation in String **
 [ ] 76 - Minimum window substring 
 [x] 239 - Sliding window maximum (Mono Queue) *
 
