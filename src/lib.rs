@@ -114,6 +114,7 @@ pub mod q345;
 pub mod q347;
 pub mod q35;
 pub mod q355;
+pub mod q36;
 pub mod q37;
 pub mod q371;
 pub mod q376;
