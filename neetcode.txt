@@ -88,7 +88,7 @@
 [x] 1046 - Last Stone Weight
 [x] 973 - K Closest Points to Origin
 [x] 215 - Kth Largest Element in array 
-[ ] 621 - Task Scheduler 
+[x] 621 - Task Scheduler 
 [x] 355 - Design Twitter 
 [x] 295 - Find Median from Data stream
 

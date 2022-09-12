@@ -21,7 +21,7 @@
 [x] 48 - Rotate Image
 [x] 355 - Design Twitter
 [x] 796 - Rotate String
-[ ] 621 - Task Scheduler
+[x] 621 - Task Scheduler
 [x] 51 - N Queens
 [x] 136 - Single Number
 [x] 191 - Number of 1 bits
