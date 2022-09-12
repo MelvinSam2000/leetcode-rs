@@ -64,7 +64,7 @@
 7. Trees
 [x] 226 - Invert Binary Tree
 [x] 104 - Max Depth of Binary Tree 
-[ ] 543 - Diameter of Binary Tree 
+[x] 543 - Diameter of Binary Tree 
 [x] 110 - Balanced Binary Tree *
 [x] 100 - Same Tree 
 [x] 572 - Subtree of another tree 
