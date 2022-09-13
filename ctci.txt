@@ -200,7 +200,7 @@ Chapter 16: Moderate
 16.3. Intersection - Not Found
 
 16.4. Tic Tac Win
-[ ] 1275. Find Winner on a Tic Tac Toe Game
+[x] 1275. Find Winner on a Tic Tac Toe Game
 
 16.5. Factorial Zeros
 [x] 172. Factorial Trailing Zeroes
