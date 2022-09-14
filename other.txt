@@ -90,3 +90,4 @@
 [x] 94 - BST Inorder traversal
 [x] 14 - Longest Common Prefix
 [x] 393 - Valid UTF-8
+[x] 2400 - Number of ways to reach pos
