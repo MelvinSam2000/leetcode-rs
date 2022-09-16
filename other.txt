@@ -94,3 +94,4 @@
 [x] 123 - Best Time to buy/sell stock III 
 [x] 34 - Find First and Last Position of Element in Sorted Array
 [x] 1108 - Defanging IP address
+[x] 1394 - Find lucky integer in array
