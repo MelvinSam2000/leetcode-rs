@@ -98,3 +98,4 @@
 [x] 1323 - Maximum 69 Number
 [x] 2331 - Evaluate Boolean Binary Tree
 [x] 1410 - HTML Entity parser
+[x] 1656 - Design Ordered Stream
