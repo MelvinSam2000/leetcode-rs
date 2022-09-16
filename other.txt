@@ -96,3 +96,4 @@
 [x] 1108 - Defanging IP address
 [x] 1394 - Find lucky integer in array
 [x] 1323 - Maximum 69 Number
+[x] 2331 - Evaluate Boolean Binary Tree
