@@ -94,6 +94,7 @@ pub mod q239;
 pub mod q2400;
 pub mod q242;
 pub mod q252;
+pub mod q256;
 pub mod q26;
 pub mod q261;
 pub mod q263;

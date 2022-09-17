@@ -15,3 +15,4 @@
 [x] 261 - Graph Valid Tree
 [/] 323 - Number of connected components (Solved 547 instead)
 [p] 271 - Encode and Decode Strings
+[x] 256 - Paint House
