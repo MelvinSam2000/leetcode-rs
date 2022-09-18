@@ -100,3 +100,4 @@
 [x] 1410 - HTML Entity parser
 [x] 1656 - Design Ordered Stream
 [x] 256 - Paint House (Premium)
+[x] 877 - Stone Game
