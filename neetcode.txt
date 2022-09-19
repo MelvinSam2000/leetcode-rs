@@ -42,7 +42,7 @@
 5. Binary Search
 [x] 704 - Binary Search 
 [ ] 74 - Search a 2d matrix 
-[ ] 875 - Koko eating bananas
+[x] 875 - Koko eating bananas
 [x] 33 - Search in rotated sorted array 
 [x] 153 - Find minimum in rotated sorted array 
 [x] 981 - Time based key value store 
