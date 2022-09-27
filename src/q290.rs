@@ -2,8 +2,46 @@
     290 - Word Pattern
     Time: O(n)
     Space: O(n)
+    Note: Made the complicated way with traits, for fun
 */
 pub fn word_pattern(pattern: String, s: String) -> bool {
+    use std::hash::Hash;
+
+    fn id_list<T, G>(list: T) -> Vec<usize>
+    where
+        T: IntoIterator<Item = G>,
+        G: Hash + Eq,
+    {
+        use std::collections::HashMap;
+
+        let mut dict = HashMap::new();
+
+        list.into_iter().fold(vec![], |mut res, elem| {
+            let id = dict.len();
+            res.push(*dict.entry(elem).or_insert(id));
+            res
+        })
+    }
+
+    let p = pattern.chars().collect::<Vec<_>>();
+    let s = s.split(' ').collect::<Vec<_>>();
+
+    if p.len() != s.len() {
+        return false;
+    }
+
+    id_list(p)
+        .into_iter()
+        .zip(id_list(s))
+        .all(|(x, y)| x == y)
+}
+
+/*
+    290 - Word Pattern
+    Time: O(n)
+    Space: O(n)
+*/
+pub fn word_pattern_v2(pattern: String, s: String) -> bool {
     use std::collections::HashMap;
 
     let s = s.split(' ').collect::<Vec<_>>();
