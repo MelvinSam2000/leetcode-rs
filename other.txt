@@ -103,3 +103,4 @@
 [x] 877 - Stone Game
 [x] 875 - Koko eating bananas
 [x] 93 - Restore IP addresses
+[x] 58 - Length of the last word
