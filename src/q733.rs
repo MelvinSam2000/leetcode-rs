@@ -15,7 +15,6 @@ pub fn flood_fill(
     helper(
         &mut image,
         (sr as usize, sc as usize),
-        color,
         &mut marked,
         m,
         n,
@@ -33,7 +32,6 @@ pub fn flood_fill(
 fn helper(
     image: &mut Vec<Vec<i32>>,
     pos: (usize, usize),
-    color: i32,
     marked: &mut Vec<Vec<bool>>,
     m: usize,
     n: usize,
@@ -43,52 +41,24 @@ fn helper(
         && !marked[pos.0 + 1][pos.1]
         && image[pos.0][pos.1] == image[pos.0 + 1][pos.1]
     {
-        helper(
-            image,
-            (pos.0 + 1, pos.1),
-            color,
-            marked,
-            m,
-            n,
-        );
+        helper(image, (pos.0 + 1, pos.1), marked, m, n);
     }
     if pos.1 != n - 1
         && !marked[pos.0][pos.1 + 1]
         && image[pos.0][pos.1] == image[pos.0][pos.1 + 1]
     {
-        helper(
-            image,
-            (pos.0, pos.1 + 1),
-            color,
-            marked,
-            m,
-            n,
-        );
+        helper(image, (pos.0, pos.1 + 1), marked, m, n);
     }
     if pos.0 != 0
         && !marked[pos.0 - 1][pos.1]
         && image[pos.0][pos.1] == image[pos.0 - 1][pos.1]
     {
-        helper(
-            image,
-            (pos.0 - 1, pos.1),
-            color,
-            marked,
-            m,
-            n,
-        );
+        helper(image, (pos.0 - 1, pos.1), marked, m, n);
     }
     if pos.1 != 0
         && !marked[pos.0][pos.1 - 1]
         && image[pos.0][pos.1] == image[pos.0][pos.1 - 1]
     {
-        helper(
-            image,
-            (pos.0, pos.1 - 1),
-            color,
-            marked,
-            m,
-            n,
-        );
+        helper(image, (pos.0, pos.1 - 1), marked, m, n);
     }
 }
